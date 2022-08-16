@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+layout: page
+title:  "Grainne"
 date:   2022-08-16 17:41:29 +0100
 categories: jekyll update
 ---
