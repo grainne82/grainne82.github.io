@@ -1,5 +1,5 @@
 main:
   -title:"About"
-  -url: about.markdown
+  -url: /about/
   -title:"Overview"
-  -title: overview.markdown
+  -title: /overview/
