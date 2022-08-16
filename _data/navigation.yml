@@ -1,5 +1,4 @@
-main:
-  -title:"About"
-   url: /about/
-  -title:"Overview"
-  -url: /overview/
+-title:"About"
+ url: /about/
+-title:"Overview"
+ url: /overview/
