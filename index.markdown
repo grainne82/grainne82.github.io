@@ -4,6 +4,7 @@
 
 layout: page
 title: Homepage
+layout: default
 
 ---
 This is my homepage.
