@@ -25,3 +25,4 @@ This is an example of my [work](pages/brochure-web.pdf).
 [About](/About.html)
 
 [About](pages/about.markdown)
+[About](pages/about.html)
