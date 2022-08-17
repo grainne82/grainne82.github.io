@@ -10,11 +10,11 @@
    <body>  
          <nav>
             <p>This is a sidebar.</p>
+            <ul>
             {% for item in site.data.navigation %}
-              <li><a href="{{ item.link }}">{{ item.title }}</a></li>
-                {{ item.name }}
-              </a>
+              <li><a href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
+            </ul>
          </nav>
    </body>
 </html>
