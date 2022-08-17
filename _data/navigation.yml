@@ -1,5 +1,7 @@
+---
+---
 items:
  -title: Overview
-  link: pages/overview/
+  link: /pages/overview/
  -title: About
-  link: pages/about/
+  link: /pages/about/
