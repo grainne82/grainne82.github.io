@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+layout: default
 permalink: pages/about.html
 ---
 
