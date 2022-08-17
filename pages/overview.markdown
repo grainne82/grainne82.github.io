@@ -1,7 +1,7 @@
 ---
 title: Overview
 permalink: /overview/
-layout: page
+layout: default
 ---
 
 # Overview
