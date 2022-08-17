@@ -1,7 +1,6 @@
 ---
 ---
 items:
- -title: Overview
-  link: /pages/overview/
- -title: About
-  link: /pages/about/
+ -title: Homepage
+  link: /
+
