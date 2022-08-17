@@ -2,7 +2,7 @@
 layout: page
 title: About
 layout: default
-permalink: pages/about.html
+permalink: pages/about/
 ---
 
 THis is my about page.
