@@ -13,4 +13,4 @@ I like flowers.
 
 ![flowers](/flower.jpeg)
 
-This is an example of my [work](/brochure-web.pdf).
+This is an example of my [work](pages/brochure-web.pdf).
