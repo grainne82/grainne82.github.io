@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://kit.fontawesome.com/75a3ff46b4.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
 
+   <body>
+
+  
+         <div>
+            AccountsIQ
+         </div>
+         
+         <nav>
+            {% for item in site.data.navigation %}
+              <a href="{{ item.link }}" {% if page.url == item.link %}style="color: green;"{% endif %}>
+                {{ item.name }}
+              </a>
+            {% endfor %}
+          </nav>
+  
+
+      
+   </body>
+</html>
