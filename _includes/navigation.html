@@ -9,7 +9,7 @@
    </head>
    <body>  
          <nav>
-            {% for item in site.data.navigation %}
+            {% for item in data.navigation %}
               <a href="{{ item.link }}" {% if page.url == item.link %}style="color: green;"{% endif %}>
                 {{ item.name }}
               </a>
