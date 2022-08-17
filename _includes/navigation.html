@@ -11,7 +11,7 @@
          <nav>
             <p>This is a sidebar.</p>
             {% for item in site.data.navigation %}
-              <a href="{{ item.link }}" {% if page.url == item.link %}style="color: green;"{% endif %}>
+              <li><a href="{{ item.link }}">{{ item.title }}</a></li>
                 {{ item.name }}
               </a>
             {% endfor %}
