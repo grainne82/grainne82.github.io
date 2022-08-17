@@ -1,6 +1,6 @@
 ---
 title: Overview
-permalink: /overview/
+permalink: pages/overview/
 layout: default
 ---
 
