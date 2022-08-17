@@ -2,7 +2,7 @@
 ---
 items:
 -title: About
- url: about.html
+ url: pages/about/
 -title: Overview
- url: overview.html
+ url: /pages/overview/
 
