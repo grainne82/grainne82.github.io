@@ -11,7 +11,7 @@
          <nav>
             <p>This is a sidebar.</p>
             <ul>
-            {% for item in site.data.navigation %}
+            {% for item in site.data.navigation.articles %}
               <li><a href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
             </ul>
