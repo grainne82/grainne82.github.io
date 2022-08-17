@@ -1,6 +1,7 @@
 ---
 ---
--title: Overview
- link: /pages/overview.markdown
--title: About
- link: /pages/about.markdown
+items:
+ -title: Overview
+  link: /pages/overview.markdown
+ -title: About
+  link: /pages/about.markdown
