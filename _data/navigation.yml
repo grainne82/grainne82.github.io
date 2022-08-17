@@ -1,6 +1,8 @@
 ---
 ---
 items:
--title: Homepage
- link: /
+-title: About
+ url: about.html
+-title: Overview
+ url: overview.html
 
