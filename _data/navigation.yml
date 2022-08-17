@@ -1,8 +1,6 @@
----
-title: Navigation.yml
----
--title: About
- url: /pages/about/
--title: Overview
- url: /pages/overview/
+item:
+ -title: About
+  url: /pages/about/
+ -title: Overview
+  url: /pages/overview/
 
