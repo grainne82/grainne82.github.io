@@ -1,6 +1,6 @@
 ---
 ---
--title: "Overview"
- link: /pages/overview.markdown
--title: "About"
- link: /pages/about.markdown
+-title: Overview
+ link: pages/overview
+-title: About
+ link: pages/about
