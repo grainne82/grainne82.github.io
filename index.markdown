@@ -22,3 +22,6 @@ This is an example of my [work](pages/brochure-web.pdf).
 
 [About](pages/About)
 [About](pages/About/)
+
+[About](/About/)
+[About](/About.html)
