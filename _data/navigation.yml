@@ -2,6 +2,6 @@
 ---
 items:
  -title: Overview
-  link: /pages/overview.markdown
+  link: pages/overview.markdown
  -title: About
-  link: /pages/about.markdown
+  link: pages/about.markdown
