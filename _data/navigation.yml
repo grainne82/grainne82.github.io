@@ -1,6 +1,4 @@
 articles:
  -title: About
-  url: /pages/about/
- -title1: Overview
-  url: /pages/overview/
-
+ -title: Blog
+ -title: Tutorial
