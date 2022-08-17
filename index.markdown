@@ -15,14 +15,8 @@ I like flowers.
 
 This is an example of my [work](pages/brochure-web.pdf).
 
-[About](pages/About.html)
-[About](/pages/About/)
-[About](pages/About.markdown)
-[About](/pages/About.html)
-[About](pages/About)
-[About](pages/About/)
-[About](/About/)
-[About](/About.html)
 
+Both these links work
 [About](pages/about.markdown)
 [About](pages/about.html)
+
