@@ -18,6 +18,5 @@ This is an example of my [work](pages/brochure-web.pdf).
 
 Both these links work
 [About](pages/about.markdown)
-[About](pages/about.html)
 [About](pages/about)
-
+[About](pages/about/)
