@@ -9,12 +9,12 @@
    </head>
    <body>  
          <nav>
-            <p>This is a sidebar.</p>
-            <ul>
-            {% for item in site.data.navigation.docs %}
-              <li>{{ item.title }}</li>
-            {% endfor %}
-            </ul>
+            <h2>{{ site.data.samplelist.docs_list_title }}</h2>
+               <ul>
+                  {% for item in site.data.samplelist.docs %}
+                     <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                  {% endfor %}
+               </ul>
          </nav>
    </body>
 </html>
