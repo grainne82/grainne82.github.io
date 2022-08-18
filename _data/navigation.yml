@@ -1,11 +1,9 @@
-docs_list_title: ACME Documentation
+docs_list_title: AccountsIQ
 docs:
 
-- title: Introduction
-  url: introduction.html
+- title: Overview
+  url: pages/overview/
 
-- title: Configuration
-  url: configuration.html
+- title: About
+  url: pages/about/
 
-- title: Deployment
-  url: deployment.html
