@@ -21,3 +21,11 @@ Both these links work
 [About](pages/about)
 [About](pages/about/)
 [Overview](pages/overview/)
+
+
+##{{ site.data.navigation.docs_list_title }}
+<ul>
+   {% for item in site.data.navigation.docs %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+   {% endfor %}
+</ul>
