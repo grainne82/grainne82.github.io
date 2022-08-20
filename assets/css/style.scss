@@ -37,7 +37,7 @@
 }
 footer {
   font-family: 'Sora';
-  width: 80%;
+  width: 100%;
   float: right;
   position: fixed;
   left: 0;
@@ -53,36 +53,52 @@ footer {
   top:0;
   left: 0;
   height: 100%;
-  background: #f9f8eb;
+  background: blue;
   text-align: left;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  height: 100%;
   }
 .nav-title{
   color: green;
   font-size: x-large;
   }
-.nav-links,
-.sub-nav-links,
-.sub-sub-nav-links {  
+.sidebar ul {  
   list-style-type: none;
-  line-height: 40px;
-  color:#162c5e;
-  
+  background: peru;
+  padding-left: 0;
   }
+.sidebar a {
+  color:darkmagenta;
+}
+.sidebar a:hover {
+  color: forestgreen;
+}
+.sidebar a:active {
+  color: violet;
+}
 .item-btn {
   border-left: 5px solid transparent;
+  position:relative;
+  background: greenyellow;
   width: 100%;
-  position: relative;
-  color: #162c5e;
   font-size: 18px;
-  padding-left: 40px;
+  line-height: 60px;
   font-weight: 500;
   display: block;
+  }
+.sub-item-btn {
+  background: silver;
+  position: relative;
   width: 100%;
-  }
-.item-btn:active {
-  color: #426eff;
-  border-left-color: #426eff;
-  }
+  line-height: 50px;
+  display: block;
+  padding-left: 20px;
+}
+.sub-sub-item-btn {
+  background: seagreen;
+  position: relative;
+  line-height: 40px;
+  width: 100%;
+  display: block;
+  padding-left: 40px;
+
+}
