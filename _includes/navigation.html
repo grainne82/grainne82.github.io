@@ -8,20 +8,20 @@
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
    </head>
    <body>  
-         <nav>
-            <h2>{{ site.data.navigation.docs_list_title }}</h2>
-            <div>
+         <nav class="sidebar">
+            <div class="nav-title">{{ site.data.navigation.docs_list_title }}</div>
+            <ul class="nav-links">
             {% if site.data.navigation.docs[0] %}
                {% for item in site.data.navigation.docs %}
-                  <li><a href="{{ item.url }}">{{ item.page }}</a></li>
+                  <li><a href="{{ item.url }}" class="item-btn">{{ item.page }}</a></li>
                      {% if item.subfolderitems[0] %}
-                        <ul>
+                        <ul class="sub-nav-links">
                            {% for entry in item.subfolderitems %}
-                              <li><a href="{{ entry.url }}">{{ entry.page }}</a>
+                              <li><a href="{{ entry.url }}" class="sub-item-btn">{{ entry.page }}</a>
                                  {% if entry.subsubfolderitems[0] %}
-                                    <ul>
+                                    <ul class="sub-sub-nav-links">
                                     {% for subentry in entry.subsubfolderitems %}
-                                       <li><a href="{{ subentry.url }}">{{ subentry.page }}</a></li>
+                                       <li><a href="{{ subentry.url }}" class="sub-sub-item-btn">{{ subentry.page }}</a></li>
                                     {% endfor %}
                                     </ul>
                                  {% endif %}
@@ -31,7 +31,7 @@
                      {% endif %}
                   {% endfor %}
                {% endif %}
-            </div>
+            </ul>
          </nav>   
    </body>
 </html>

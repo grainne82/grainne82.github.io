@@ -8,10 +8,10 @@
   h3,
   h4,
   h5,
-  h6 {
-   color: #162c5e;
+  h6,
+  p {
+   color: pink;
    font-family: 'Sora';
-   margin-left: 150px;
   }
       
  p {
@@ -27,11 +27,13 @@
 .page-header {
   color: #f9f8eb;
   text-align: left;
-  margin-left: 250px;
-  height: 80px;
+  height: 10%;
   background-color: #426eff;
   background-image: none;
   font-family: 'Sora';
+}
+.project-name {
+  color:aquamarine;
 }
 footer {
   font-family: 'Sora';
@@ -45,3 +47,42 @@ footer {
   border: none;
   }
 
+.sidebar{
+  position: fixed;
+  width: 20%;
+  top:0;
+  left: 0;
+  height: 100%;
+  background: #f9f8eb;
+  text-align: left;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+.nav-title{
+  color: green;
+  font-size: x-large;
+  }
+.nav-links,
+.sub-nav-links,
+.sub-sub-nav-links {  
+  list-style-type: none;
+  line-height: 40px;
+  color:#162c5e;
+  
+  }
+.item-btn {
+  border-left: 5px solid transparent;
+  width: 100%;
+  position: relative;
+  color: #162c5e;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  }
+.item-btn:active {
+  color: #426eff;
+  border-left-color: #426eff;
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://kit.fontawesome.com/75a3ff46b4.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
+
+   <body>
+
+      <nav class="sidebar">
+         <div class="text">
+            AccountsIQ
+         </div>
+         <ul>
+            <li>
+               <a href="https://grainnereidy.github.io/Authentication/Security" class="over-btn">Security
+               <span class="fa-solid fa-caret-down first"></span>
+               </a>
+               <ul class="over-show">
+                  <li><a href="https://grainnereidy.github.io/Authentication/Introduction">About</a></li>
+                  <li><a href="#">Use Cases</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="https://grainnereidy.github.io/Overview/About" class="auth-btn">Authentication
+               <span class="fa-solid fa-caret-down second"></span>
+               </a>
+               <ul class="auth-show">
+                  <li><a href="https://grainnereidy.github.io/Overview/Introduction">Security</a></li>
+                  <li><a href="#">Rate Limits</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="https://grainnereidy.github.io/Getting_started/First_steps" class="start-btn">Getting Started 
+               <span class="fa-solid fa-caret-down third"></span>
+               </a>
+               <ul class="start-show">
+                  <li><a href="https://grainnereidy.github.io/Getting_started/Introduction">First Steps</a></li>
+                  <li><a href="#">Next</a></li>
+               </ul>
+            </li>
+         </ul>
+      </nav>
+
+      <script>
+         $('.btn').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+           $('.over-btn').click(function(){
+             $('nav ul .over-show').toggleClass("show");
+             $('nav ul .first').toggleClass("rotate");
+           });
+           $('.auth-btn').click(function(){
+             $('nav ul .auth-show').toggleClass("show1");
+             $('nav ul .second').toggleClass("rotate");
+           });
+           $('.start-btn').click(function(){
+             $('nav ul .start-show').toggleClass("show2");
+             $('nav ul .third').toggleClass("rotate");
+           });
+           $('nav ul li').click(function(){
+             $(this).addClass("active").siblings().removeClass("active");
+           });
+      </script>
+   </body>
+</html>
