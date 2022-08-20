@@ -1,6 +1,6 @@
 docs_list_title: AccountsIQ
 docs:
-  - title: Overview
+  - page: Overview
     url: pages/overview/
     subfolderitems:
       - page: About
