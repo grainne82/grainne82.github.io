@@ -7,7 +7,7 @@ docs:
         url: pages/about/
       - page: Authentication
         url: pages/authentication/
-  - title: Reference
+  - page: Reference
     url: pages/reference/       
     subfolderitems:
       - page: Category Overview
