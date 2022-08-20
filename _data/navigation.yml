@@ -14,7 +14,7 @@ docs:
         url: pages/category1/
         subsubfolderitems:
           - page: Method 1
-          url: pages/method1/
+            url: pages/method1/
           - page: Method 2
             url: pages/method2/
        
