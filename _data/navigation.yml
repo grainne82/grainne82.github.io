@@ -1,9 +1,21 @@
 docs_list_title: AccountsIQ
 docs:
-
-- title: Overview
-  url: pages/overview/
-
-- title: About
-  url: pages/about/
-
+  - title: Overview
+    url: pages/overview/
+    subfolderitems:
+      - page: About
+        url: pages/about/
+      - page: Authentication
+        url: pages/authentication/
+  - title: Reference
+    url: pages/reference/       
+    subfolderitems:
+      - page: Category Overview
+        url: pages/category1/
+        subsubfolderitems:
+          - page: Method 1
+          url: pages/method1/
+          - page: Method 2
+            url: pages/method2/
+       
+  
