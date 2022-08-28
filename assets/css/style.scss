@@ -1,105 +1,164 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css?family=Sora');
+@import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 @import "{{ site.theme }}";
-.main-content {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-   color: pink;
-   font-family: 'Sora';
-  }
-      
- p {
-   display: block;
-   font-family: 'Sora';
-    }
- a {
-  color: #426eff;
+
+* {
   font-family: 'Sora';
-  text-decoration: none;
+  font-size: 1em;
 }
+a {
+  color: black;
 }
-.page-header {
-  text-align: left;
+ul, li {
+  list-style-type: none;
   padding: 0;
-  background-color: #426eff;
+  margin: 0;
+}
+
+/*HEADER*/
+
+.page-header { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #fff;
   background-image: none;
-  font-family: 'Sora';
-}
-.project-name {
-  color:aquamarine;
-}
-footer {
-  font-family: 'Sora';
   width: 100%;
-  float: right;
-  position: fixed;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eed1fe;
+}
+.company {
+  color:#162c5e;
+}
+.company h1 {
+   font-size: 2rem;
+   font-weight:400;
+}
+.project-name span {
+  color: #425eff;
+  font-weight: 600;
+}
+.nav-container {
+  width: 40%;  
+}
+.nav-container nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.nav-container nav ul li a {
+   color: #162c5e;
+   font-size: 1.25rem;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+/*SIDENAV GENERAL*/
+.main-container,
+.main-content,
+.sidenav,
+.article {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content{
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: 100vh;
+  max-width: 100%;
+  justify-content: space-between;
+}
+.sidenav {
+  background: #f1f5fc;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 20em;
+}
+/*SIDENAV LINKS*/
+.sidebar {
+  width:100%;
+}
+/*NAV BUTTON BACKGROUND*/
+
+.nav-links .item {
+  width:100%;
+  background: firebrick;
+}
+.sub-nav-links .sub-item {
+  background: yellow;
+  width: 100%; 
+}
+.sub-sub-nav-links .sub-sub-item {
+  background: darkkhaki;
+  width: 100%;
+  border: 2px solid gold;
+}
+/*NAV LINK TEXT*/
+.item-btn {
+  font-size: 1.5rem;
+  width: 100%;
+  border: 2px solid black;
+  padding-left: 1em;
+  background: pink;
+
+}
+.sub-item-btn {
+  font-size: 1.25rem;
+  width: 100%;
+  padding-left: 2em;
+  border: 2px solid black;
+}
+.sub-sub-item-btn {
+  font-size: 1rem;
+  width: 100%;
+  padding-left: 3em;
+  border: 2px solid black;
+}
+
+/*ARTICLE*/
+.article {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/*FOOTER*/
+footer {
+  text-align: center;
+  position:fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  text-align: center;
-  border: none;
-  z-index: -1;
-  }
+  z-index: 1;
+  background: #fff;
+}
 
-.sidebar{
-  position: fixed;
-  margin-top:5.25%;
-  width: 20%;
-  top:0;
-  left: 0;
-  height: 100%;
-  background: blue;
-  text-align: left;
-  height: 100%;
+@media only screen and (max-width: 600px) {
+  .page-header,
+  .main-content,
+  {
+    flex-direction: column;
+    width: 100%;
   }
-.nav-title{
-  color: green;
-  font-size: x-large;
+  .article {
+    width: 100%;
   }
-.sidebar ul {  
-  list-style-type: none;
-  background: peru;
-  padding-left: 0;
+  .sidenav {
+    width: 100%;
   }
-.sidebar a {
-  color:darkmagenta;
-}
-.sidebar a:hover {
-  color: forestgreen;
-}
-.sidebar a:active {
-  color: violet;
-}
-.item-btn {
-  border-left: 5px solid transparent;
-  position:relative;
-  background: greenyellow;
-  width: 100%;
-  font-size: 18px;
-  line-height: 60px;
-  font-weight: 500;
-  display: block;
-  }
-.sub-item-btn {
-  background: silver;
-  position: relative;
-  width: 100%;
-  line-height: 50px;
-  display: block;
-  padding-left: 20px;
-}
-.sub-sub-item-btn {
-  background: seagreen;
-  position: relative;
-  line-height: 40px;
-  width: 100%;
-  display: block;
-  padding-left: 40px;
+  .main-content {
+    justify-content: flex-start;
 
+  }
 }
