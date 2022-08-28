@@ -1,6 +1,6 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
+{@import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 @import "{{ site.theme }}";
 
 * {
@@ -146,7 +146,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .page-header,
-  .main-content,
+  .main-content
   {
     flex-direction: column;
     width: 100%;
@@ -161,4 +161,4 @@ footer {
     justify-content: flex-start;
 
   }
-}
+}}
