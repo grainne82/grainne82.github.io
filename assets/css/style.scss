@@ -1,64 +1,13 @@
 ---
 ---
-{@import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 @import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 
 * {
   font-family: 'Sora';
-  font-size: 1em;
 }
-a {
-  color: black;
-}
-ul, li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/*HEADER*/
-
-.page-header { 
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  background-image: none;
-  width: 100%;
-  height: 6em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eed1fe;
-}
-.company {
-  color:#162c5e;
-}
-.company h1 {
-   font-size: 2rem;
-   font-weight:400;
-}
-.project-name span {
-  color: #425eff;
-  font-weight: 600;
-}
-.nav-container {
-  width: 40%;  
-}
-.nav-container nav ul{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-.nav-container nav ul li a {
-   color: #162c5e;
-   font-size: 1.25rem;
-   font-weight: 600;
-   text-decoration: none;
-}
-
-/*SIDENAV GENERAL*/
 .main-container,
+.page-header,
 .main-content,
 .sidenav,
 .article {
@@ -66,72 +15,121 @@ ul, li {
   margin: 0;
   padding: 0;
 }
-
 .main-content{
   display: flex;
-  flex-wrap: nowrap;
-  box-sizing: border-box;
-  margin: 0;
   width: 100%;
-  padding: 0;
   height: 100vh;
   max-width: 100%;
   justify-content: space-between;
 }
-.sidenav {
-  background: #f1f5fc;
-  padding: 0;
+a {
+  color: #425eff;
+}
+a:hover {
+  color: #425eff80;
+  text-decoration: none;
+}
+/*HEADER*/
+
+.page-header { 
+  background: #fff;
+  background-image: none;
+  width: 100%;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #f1f5fc;
+}
+.company {
+  width: 30%;
+}
+.project-name {
+   font-weight:400;
+   font-size: 2rem;
+   color: #162c5e;
+   text-align: left;
+   padding-left: 5%;
+}
+
+.project-name span {
+  color: #425eff;
+  font-weight: 600;
+}
+.nav-container {
+  width: 40%;
+}
+.nav-container nav ul{
+  display: flex;
+  width: 100%;
+  justify-content:space-around;
+  align-items: flex-end;
+  list-style: none;
   margin: 0;
-  box-sizing: border-box;
-  width: 20em;
+  padding: 0;
+}
+
+.nav-container a {
+   color: #162c5e;
+   font-size: 1.25rem;
+   display: inline-block;
+   font-weight: 600;
+   text-decoration: none;
+}
+.nav-container a:hover {
+  color:#425eff;
+}
+
+/*SIDENAV GENERAL*/
+
+.sidenav {
+  background: #162c5e;
+  width: 30rem;
 }
 /*SIDENAV LINKS*/
 .sidebar {
   width:100%;
 }
+.sidebar ul, 
+.sidebar li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*NAV BUTTON BACKGROUND*/
-
-.nav-links .item {
-  width:100%;
-  background: firebrick;
-}
+.nav-links .item,
 .sub-nav-links .sub-item {
-  background: yellow;
-  width: 100%; 
+  width:100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
-.sub-sub-nav-links .sub-sub-item {
-  background: darkkhaki;
-  width: 100%;
-  border: 2px solid gold;
-}
-/*NAV LINK TEXT*/
-.item-btn {
-  font-size: 1.5rem;
-  width: 100%;
-  border: 2px solid black;
-  padding-left: 1em;
-  background: pink;
 
-}
-.sub-item-btn {
-  font-size: 1.25rem;
+/*NAV LINK TEXT*/
+
+.sidebar a {
+  color:#fff;
   width: 100%;
-  padding-left: 2em;
-  border: 2px solid black;
+  display: inline-block;
 }
-.sub-sub-item-btn {
-  font-size: 1rem;
-  width: 100%;
-  padding-left: 3em;
-  border: 2px solid black;
+.sidebar a:hover {
+  text-decoration:none;
+  color: #425eff;
+}
+.item-btn {
+  border-bottom: 1px solid #f1f5fc;
 }
 
 /*ARTICLE*/
 .article {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   width: 100%;
+  padding-top: 2em;
+  padding-left: 5em;
+}
+.article h1,
+.article h2,
+.article h3 {
+  color: #162c5e;
 }
 /*FOOTER*/
 footer {
@@ -144,21 +142,32 @@ footer {
   background: #fff;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .page-header,
   .main-content
   {
     flex-direction: column;
     width: 100%;
   }
-  .article {
-    width: 100%;
-  }
+  .company, 
+  .article,
   .sidenav {
     width: 100%;
   }
+  .nav-container {
+    width: 60%;
+  }  
   .main-content {
     justify-content: flex-start;
-
   }
-}}
+  .item-btn,
+  .sub-item-btn,
+  .sub-sub-item-btn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav-links {
+    text-align: center;
+  }
+
+}
