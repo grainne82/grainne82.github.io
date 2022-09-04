@@ -3,6 +3,7 @@ docs:
   - page: Overview
     url: pages/overview/
     class: fa-solid fa-house-user
+    caret: fa-solid fa-caret-down
     subfolderitems:
       - page: About
         url: pages/about/
@@ -12,11 +13,13 @@ docs:
         class: fa-solid fa-house-user
   - page: Reference
     url: pages/reference/
-    class: fa-solid fa-house-user      
+    class: fa-solid fa-house-user
+    caret: fa-solid fa-caret-down      
     subfolderitems:
       - page: Category Overview
         url: pages/category1/
-        class: fa-solid fa-house-user 
+        class: fa-solid fa-house-user
+        caret: fa-solid fa-caret-down 
         subsubfolderitems:
           - page: Method 1
             url: pages/method1/

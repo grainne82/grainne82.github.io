@@ -79,14 +79,16 @@ a:hover {
   color:#425eff;
 }
 
-/*SIDENAV GENERAL*/
+/*SIDENAV GENERAL*///////////////////////////////////////////////////////////////////////////////////
 
+/*NAV AREA*/
 .sidenav {
   background: #162c5e;
   width: 100%;
   min-width: 230px; 
 }
-/*SIDENAV LINKS*/
+
+/*SIDENAV LINKS LIST*/
 .sidebar {
   width:100%;
 }
@@ -96,41 +98,67 @@ a:hover {
   padding: 0;
   margin: 0;
 }
-
-/*NAV BUTTON BACKGROUND*/
 .nav-links .item,
 .sub-nav-links .sub-item {
   width:100%;
-  padding-left: 5%;
-  padding-right: 10%;
+  /* padding-left: 5%;
+  padding-right: 5%; */
 }
 
 /*NAV LINK TEXT*/
-
 .sidebar a {
   color:#fff;
   width: 100%;
   display: inline-block;
+  width: 70%;
+  margin-left: 5%;
+  border: 2px solid red;
 }
 .sidebar a:hover {
-  text-decoration:none;
+  text-decoration: none;
   color: #425eff;
 }
-.item-btn {
+.item-text {
   border-bottom: 1px solid #f1f5fc;
+  background: blanchedalmond;
 }
-/*DRPDOWN*/
+
+/*DRoPDOWN*/
 .dropdown-btn {
   width: 100%;
   white-space: nowrap;
-  text-align: left;
   background: #162c5e;
+  padding: 0;
   border: none;
+  text-align: left;
+  border: 2px solid yellow;
+
 }
+.dropdown-btn h2,
+.dropdown-btn h3,
+.dropdown-btn h4 {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  border: 2px solid green;
+}
+
+/*ICONS*/
 i {
-  color: #fff;
- 
-  right: 0;
+  color: white; 
+  border: 2px solid red;
+} 
+.fa-solid {
+  color:#fff;
+  padding: 2%;
+}
+.fa-house-user {
+  float: left;
+  font-size: .75rem;
+}
+.fa-caret-down {
+  float: right;
+  font-size: 1rem;
 }
 
 /*ARTICLE*/

@@ -12,15 +12,15 @@
             <ul class="nav-links">
             {% if site.data.navigation.docs[0] %}
                {% for item in site.data.navigation.docs %}
-                  <li class="item"><button class="dropdown-btn"><h2><i class="{{item.class}}"></i><a href="{{ item.url }}" class="item-btn">{{ item.page }}</a><i class="fa-solid fa-caret-down"></i></h2></button></li>
+                  <li class="item"><button class="dropdown-btn"><h2><i class="{{ item.class }}"></i><a href="{{ item.url }}" class="item-text">{{ item.page }}</a><i class="{{ item.caret }}"></i></h2></button></li>
                      {% if item.subfolderitems[0] %}
                         <ul class="sub-nav-links">
                            {% for entry in item.subfolderitems %}
-                              <li class="sub-item"><button class="dropdown-btn"><h3><i class="{{entry.class}}"></i><a href="{{ entry.url }}" class="sub-item-btn">{{ entry.page }}</a><i class="fa-solid fa-caret-down"></i></h3></button>
+                              <li class="sub-item"><button class="dropdown-btn"><h3><i class="{{ entry.class }}"></i><a href="{{ entry.url }}" class="sub-item-text">{{ entry.page }}</a><i class="{{ entry.caret }}"></i></h3></button>
                                  {% if entry.subsubfolderitems[0] %}
                                     <ul class="sub-sub-nav-links">
                                     {% for subentry in entry.subsubfolderitems %}
-                                       <li class="sub-sub-item"><h4><a href="{{ subentry.url }}" class="sub-sub-item-btn">{{ subentry.page }}</a></h4></li>
+                                       <li class="sub-sub-item"><button class="dropdown-btn"><h4><i class="{{ subentry.class }}"></i><a href="{{ subentry.url }}" class="sub-sub-item-text">{{ subentry.page }}</a><i class="{{ subentry.caret }}"></i></h4></button></li>
                                     {% endfor %}
                                     </ul>
                                  {% endif %}
