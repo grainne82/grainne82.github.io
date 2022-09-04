@@ -17,10 +17,11 @@
 }
 .main-content{
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   max-width: 100%;
-  justify-content: space-between;
+  align-items: flex-start;
 }
 a {
   color: #425eff;
@@ -37,36 +38,34 @@ a:hover {
   width: 100%;
   height: 6em;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #f1f5fc;
 }
 .company {
-  width: 30%;
+  width: 100%;
 }
 .project-name {
    font-weight:400;
    font-size: 2rem;
    color: #162c5e;
    text-align: left;
-   padding-left: 5%;
 }
 
 .project-name span {
   color: #425eff;
   font-weight: 600;
 }
-.nav-container {
+ .nav-container {
   width: 40%;
-}
+} 
 .nav-container nav ul{
   display: flex;
   width: 100%;
   justify-content:space-around;
   align-items: flex-end;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-container a {
@@ -84,7 +83,8 @@ a:hover {
 
 .sidenav {
   background: #162c5e;
-  width: 30rem;
+  width: 100%;
+  min-width: 230px; 
 }
 /*SIDENAV LINKS*/
 .sidebar {
@@ -102,7 +102,7 @@ a:hover {
 .sub-nav-links .sub-item {
   width:100%;
   padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 10%;
 }
 
 /*NAV LINK TEXT*/
@@ -118,6 +118,19 @@ a:hover {
 }
 .item-btn {
   border-bottom: 1px solid #f1f5fc;
+}
+/*DRPDOWN*/
+.dropdown-btn {
+  width: 100%;
+  white-space: nowrap;
+  text-align: left;
+  background: #162c5e;
+  border: none;
+}
+i {
+  color: #fff;
+ 
+  right: 0;
 }
 
 /*ARTICLE*/
@@ -142,32 +155,15 @@ footer {
   background: #fff;
 }
 
-@media only screen and (max-width: 900px) {
-  .page-header,
-  .main-content
-  {
-    flex-direction: column;
-    width: 100%;
+/*MEDIA QUERIES*/
+@media  only screen and (min-width: 769px){
+  .page-header, .main-content {
+    flex-direction: row; 
   }
-  .company, 
-  .article,
   .sidenav {
-    width: 100%;
-  }
-  .nav-container {
-    width: 60%;
-  }  
-  .main-content {
-    justify-content: flex-start;
-  }
-  .item-btn,
-  .sub-item-btn,
-  .sub-sub-item-btn {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .nav-links {
-    text-align: center;
+    height: 100vh;
+    width: 40%;
   }
 
 }
+

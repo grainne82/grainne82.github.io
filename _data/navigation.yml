@@ -2,16 +2,21 @@ docs_list_title: AccountsIQ
 docs:
   - page: Overview
     url: pages/overview/
+    class: fa-solid fa-house-user
     subfolderitems:
       - page: About
         url: pages/about/
+        class: fa-solid fa-house-user
       - page: Authentication
         url: pages/authentication/
+        class: fa-solid fa-house-user
   - page: Reference
-    url: pages/reference/       
+    url: pages/reference/
+    class: fa-solid fa-house-user      
     subfolderitems:
       - page: Category Overview
         url: pages/category1/
+        class: fa-solid fa-house-user 
         subsubfolderitems:
           - page: Method 1
             url: pages/method1/
