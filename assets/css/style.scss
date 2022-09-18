@@ -36,42 +36,49 @@ a:hover {
   background: #fff;
   background-image: none;
   width: 100%;
-  height: 6em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   border-bottom: 2px solid #f1f5fc;
 }
-.company {
-  width: 100%;
-}
-.project-name {
-   font-weight:400;
-   font-size: 2rem;
-   color: #162c5e;
-   text-align: left;
+
+.project-name a{
+  color: cornflowerblue;
+
+  
 }
 
-.project-name span {
-  color: #425eff;
+.project-name-accent {
+  color: pink;
   font-weight: 600;
-}
- .nav-container {
-  width: 40%;
-} 
-.nav-container nav ul{
-  display: flex;
-  width: 100%;
-  justify-content:space-around;
-  align-items: flex-end;
-  list-style: none;
+  border: 2px solid aquamarine;
 }
 
-.nav-container a {
+ .project-name a {
+  font-size: 2rem;
+  display: inline-block;
+  border: 2px solid hotpink;
+}
+.project-name-base:hover + .project-name-accent,
+.project-name-accent:hover + .project-name-base {
+  color: teal;
+}
+
+ .nav-container {
+  width:100%;
+ }
+
+.nav-container nav ul {
+  width:100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding: 0;  
+}
+
+.nav-container li a {
    color: #162c5e;
    font-size: 1.25rem;
-   display: inline-block;
    font-weight: 600;
    text-decoration: none;
 }
@@ -111,19 +118,17 @@ a:hover {
 .sidenav a {
   color:white;
   width: 100%;
+  display: inline-block;
 }
-.sidenav a:hover {
-  color: aqua;
-  transition: 0.2s ease-out;
-}
+
 
 .item a:hover,
 .sub-item-top-item a:hover,
 .sub-sub-item a:hover {
   background: gray;
   width: 100%;
-  color:purple;
-  display: inline-block;
+  color:purple; 
+  transition: 0.2s ease-out;
 }
 
 /*NAV LINK TEXT*/
@@ -185,9 +190,25 @@ footer {
   .page-header, .main-content {
     flex-direction: row; 
   }
+  .page-header {
+    justify-content: space-between;
+    height: 6rem;
+  }
+  .nav-container {
+    width:40rem;
+  }
+  .nav-container nav ul{
+    justify-content: space-around;
+  }
   .sidenavContainer {
     height: 100vh;
     width: 29rem;
+  }
+  .project-name {
+    text-align: left;
+  }
+  .company {
+    // width: 25%;
   }
 
 }
