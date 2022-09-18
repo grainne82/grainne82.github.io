@@ -7,24 +7,48 @@
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
    </head>
    <body>  
-         <nav class="sidebar">
-        
+         <nav class="sidenav">
             <ul class="nav-links">
             {% if site.data.navigation.docs[0] %}
                {% for item in site.data.navigation.docs %}
-                  <li class="item"><button class="dropdown-btn"><h2><i class="{{ item.class }}"></i><a href="{{ item.url }}" class="item-text">{{ item.page }}</a><i class="{{ item.caret }}"></i></h2></button></li>
+
+                  <div class=dropdown-btn> 
+                     <li class="item">
+                        <a href="{{ item.url }}">
+                           <i class="{{ item.class }}"></i>
+                           <span class="item-text"> {{ item.page }}</span>
+                           <i class="{{ item.caret }}"></i>
+                        </a>
+                     </li>
+                  </div>
+
                      {% if item.subfolderitems[0] %}
                         <ul class="sub-nav-links">
                            {% for entry in item.subfolderitems %}
-                              <li class="sub-item"><button class="dropdown-btn"><h3><i class="{{ entry.class }}"></i><a href="{{ entry.url }}" class="sub-item-text">{{ entry.page }}</a><i class="{{ entry.caret }}"></i></h3></button>
+                              <div class=dropdown-btn>
+                                 <li class="sub-item">
+                                    <div class="sub-item-top-item">
+                                       <a href="{{ entry.url }}">
+                                          <i class="{{ entry.class }}"></i>
+                                          <i class="{{ entry.caret }}"></i>
+                                          <span class="sub-item-text"> {{ entry.page }}</span> 
+                                       </a>
+                                    </div>
+
                                  {% if entry.subsubfolderitems[0] %}
                                     <ul class="sub-sub-nav-links">
-                                    {% for subentry in entry.subsubfolderitems %}
-                                       <li class="sub-sub-item"><button class="dropdown-btn"><h4><i class="{{ subentry.class }}"></i><a href="{{ subentry.url }}" class="sub-sub-item-text">{{ subentry.page }}</a><i class="{{ subentry.caret }}"></i></h4></button></li>
+                                       {% for subentry in entry.subsubfolderitems %}
+                                          <li class="sub-sub-item">
+                                             <a href="{{ subentry.url }}" >
+                                                <i class="{{ subentry.class }}"></i>
+                                                <span class="sub-sub-item-text"> {{ subentry.page }}</span>
+                                             </a>  
+                                          </li>
                                     {% endfor %}
                                     </ul>
                                  {% endif %}
-                              </li>
+                                 </li>
+                           </div>
                            {% endfor %}
                         </ul>
                      {% endif %}

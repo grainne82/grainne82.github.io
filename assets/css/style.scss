@@ -9,7 +9,7 @@
 .main-container,
 .page-header,
 .main-content,
-.sidenav,
+.sidenavContainer,
 .article {
   box-sizing: border-box;
   margin: 0;
@@ -82,83 +82,80 @@ a:hover {
 /*SIDENAV GENERAL*///////////////////////////////////////////////////////////////////////////////////
 
 /*NAV AREA*/
-.sidenav {
+.sidenavContainer {
   background: #162c5e;
   width: 100%;
-  min-width: 230px; 
+  min-width: 230px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
 }
 
 /*SIDENAV LINKS LIST*/
-.sidebar {
-  width:100%;
+.sidenav {
+  width:100%; 
 }
-.sidebar ul, 
-.sidebar li {
+.sidenav ul, 
+.sidenav li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.nav-links .item,
-.sub-nav-links .sub-item {
-  width:100%;
-  /* padding-left: 5%;
-  padding-right: 5%; */
+.item {
+  border-bottom: 1px solid #f1f5fc;
+}
+.item, .sub-item {
+  position: relative;
+}
+
+/*NAV LINK HOVER*/
+.sidenav a {
+  color:white;
+  width: 100%;
+}
+.sidenav a:hover {
+  color: aqua;
+  transition: 0.2s ease-out;
+}
+
+.item a:hover,
+.sub-item-top-item a:hover,
+.sub-sub-item a:hover {
+  background: gray;
+  width: 100%;
+  color:purple;
+  display: inline-block;
 }
 
 /*NAV LINK TEXT*/
-.sidebar a {
-  color:#fff;
-  width: 100%;
-  display: inline-block;
-  width: 70%;
-  margin-left: 5%;
-  border: 2px solid red;
-}
-.sidebar a:hover {
-  text-decoration: none;
-  color: #425eff;
-}
 .item-text {
-  border-bottom: 1px solid #f1f5fc;
-  background: blanchedalmond;
+  font-size: 1.5rem;
+  line-height: 3rem;
+ 
+}
+.sub-item-text {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  margin-left: 1rem;
+ 
+}
+.sub-sub-item-text { 
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-left: 5rem;  
 }
 
-/*DRoPDOWN*/
-.dropdown-btn {
-  width: 100%;
-  white-space: nowrap;
-  background: #162c5e;
-  padding: 0;
-  border: none;
-  text-align: left;
-  border: 2px solid yellow;
-
-}
-.dropdown-btn h2,
-.dropdown-btn h3,
-.dropdown-btn h4 {
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  border: 2px solid green;
-}
 
 /*ICONS*/
+
 i {
-  color: white; 
-  border: 2px solid red;
-} 
-.fa-solid {
-  color:#fff;
-  padding: 2%;
 }
 .fa-house-user {
-  float: left;
-  font-size: .75rem;
+  margin-right: 1rem;
+ 
 }
 .fa-caret-down {
-  float: right;
-  font-size: 1rem;
+  position: absolute;
+  right: 0;
 }
 
 /*ARTICLE*/
@@ -188,9 +185,9 @@ footer {
   .page-header, .main-content {
     flex-direction: row; 
   }
-  .sidenav {
+  .sidenavContainer {
     height: 100vh;
-    width: 40%;
+    width: 29rem;
   }
 
 }
