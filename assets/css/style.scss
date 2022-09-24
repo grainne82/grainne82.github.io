@@ -31,7 +31,9 @@ a:hover {
   text-decoration: none;
 }
 /*HEADER*/
-
+.page-header {
+  position: relative;
+}
 .page-header { 
   background: #fff;
   background-image: none;
@@ -39,33 +41,46 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.company {
+  width: 100%;
+  height:6rem;
+  display:flex;
   border-bottom: 2px solid #f1f5fc;
+  align-items: center;
+
+}
+.project-name {
+  width:100%;
+  text-align: left;
+  margin-left: 1rem;
+}
+.project-name a {
+  color: #425eff;
 }
 
-.project-name a{
-  color: cornflowerblue;
+// .project-name-accent {
+//   color: pink;
+//   font-weight: 600;
+//   border: 2px solid aquamarine;
+// }
 
-  
-}
-
-.project-name-accent {
-  color: pink;
-  font-weight: 600;
-  border: 2px solid aquamarine;
-}
-
- .project-name a {
-  font-size: 2rem;
-  display: inline-block;
-  border: 2px solid hotpink;
-}
-.project-name-base:hover + .project-name-accent,
-.project-name-accent:hover + .project-name-base {
-  color: teal;
-}
+//  .project-name a {
+//   font-size: 2rem;
+//   display: inline-block;
+//   border: 2px solid hotpink;
+// }
+// .project-name-base:hover + .project-name-accent,
+// .project-name-accent:hover + .project-name-base {
+//   color: teal;
+// }
 
  .nav-container {
-  width:100%;
+  width:80%;
+  display: none;
+ }
+ .header {
+  position: relative;
  }
 
 .nav-container nav ul {
@@ -74,6 +89,12 @@ a:hover {
   list-style: none;
   justify-content: space-evenly;
   padding: 0;  
+  flex-direction: row;
+  margin: 0;
+}
+.nav-container nav ul li {
+  width: 100%;
+ 
 }
 
 .nav-container li a {
@@ -81,9 +102,44 @@ a:hover {
    font-size: 1.25rem;
    font-weight: 600;
    text-decoration: none;
+   width: 100%;
+   display: block;
+   padding: .25rem 0rem;
 }
 .nav-container a:hover {
   color:#425eff;
+}
+.hamburger-menu .bars {
+  position:absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.hamburger-menu .cross {
+  font-size: large;
+  color: #162c5e;
+  position:absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  height: 3px;
+  width: 100%;
+  background-color: #162c5e;
+  border-radius: 10px;
+}
+.nav-container.active {
+  display: block;
+}
+.hamburger-menu .hidden {
+  display: none;
 }
 
 /*SIDENAV GENERAL*///////////////////////////////////////////////////////////////////////////////////
@@ -91,10 +147,17 @@ a:hover {
 /*NAV AREA*/
 .sidenavContainer {
   background: #162c5e;
-  width: 100%;
+  width: 70%;
   min-width: 230px;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  display:none;
+  margin: auto;
+  border-radius: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+.sidenavContainer.active {
+  display: block;
+  margin-top: 1rem;
 }
 
 /*SIDENAV LINKS LIST*/
@@ -107,8 +170,15 @@ a:hover {
   padding: 0;
   margin: 0;
 }
-.item {
+.item::after{
   border-bottom: 1px solid #f1f5fc;
+  width: 95%;
+  content: '';
+  position: absolute;
+  width: 97%;
+  bottom: 0;
+  left:1.5%;
+
 }
 .item, .sub-item {
   position: relative;
@@ -119,6 +189,8 @@ a:hover {
   color:white;
   width: 100%;
   display: inline-block;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
 }
 
 
@@ -149,11 +221,24 @@ a:hover {
   margin-left: 5rem;  
 }
 
+/*SCROLLBAR*////////////////////////////////////
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f5fc;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d1d2db;
+  border-radius: 20px;
+}
 
 /*ICONS*/
 
-i {
-}
+
 .fa-house-user {
   margin-right: 1rem;
  
@@ -173,6 +258,9 @@ i {
 .article h2,
 .article h3 {
   color: #162c5e;
+}
+.article.active {
+  display: none;
 }
 /*FOOTER*/
 footer {
@@ -194,22 +282,31 @@ footer {
     justify-content: space-between;
     height: 6rem;
   }
+  .company {
+    border:none;
+  }
   .nav-container {
     width:40rem;
+    display: block;  
   }
   .nav-container nav ul{
     justify-content: space-around;
+    flex-direction: row;
   }
   .sidenavContainer {
     height: 100vh;
     width: 29rem;
+    display: block;
+    border-radius: 0px;
   }
   .project-name {
     text-align: left;
   }
-  .company {
-    // width: 25%;
+  .hamburger-menu {
+    display: none;
   }
+  
+  
 
 }
 
