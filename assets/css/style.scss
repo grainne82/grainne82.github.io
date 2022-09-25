@@ -54,26 +54,23 @@ a:hover {
   width:100%;
   text-align: left;
   margin-left: 1rem;
+  
 }
 .project-name a {
-  color: #425eff;
+  display: flex;
 }
 
-// .project-name-accent {
-//   color: pink;
-//   font-weight: 600;
-//   border: 2px solid aquamarine;
-// }
-
-//  .project-name a {
-//   font-size: 2rem;
-//   display: inline-block;
-//   border: 2px solid hotpink;
-// }
-// .project-name-base:hover + .project-name-accent,
-// .project-name-accent:hover + .project-name-base {
-//   color: teal;
-// }
+.project-name a .name-main {
+  color: #425eff;
+  
+}
+.project-name a .name-accent {
+  color: #162c5e;
+  font-weight: 600;
+}
+.project-name a:hover .hover {
+  opacity: 0.5;
+}
 
  .nav-container {
   width:80%;
@@ -115,17 +112,9 @@ a:hover {
   right: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 30px;
-  height: 21px;
-}
-.hamburger-menu .cross {
-  font-size: large;
-  color: #162c5e;
-  position:absolute;
-  top: 1.5rem;
-  right: 2rem;
-  display: flex;
+  height: 30px;
 }
 .hamburger-top,
 .hamburger-middle,
@@ -138,8 +127,17 @@ a:hover {
 .nav-container.active {
   display: block;
 }
-.hamburger-menu .hidden {
+
+.hamburger-menu.active .bars .hamburger-middle {
   display: none;
+}
+.hamburger-menu.active .bars .hamburger-top {
+  transform: rotate(-45deg);
+  position: absolute;
+}
+.hamburger-menu.active .bars .hamburger-bottom {
+  transform: rotate(45deg);
+  position: absolute; 
 }
 
 /*SIDENAV GENERAL*///////////////////////////////////////////////////////////////////////////////////
@@ -220,6 +218,20 @@ a:hover {
   line-height: 2rem;
   margin-left: 5rem;  
 }
+.sub-nav-links {
+  display: none;
+}
+// .sub-sub-nav-links {
+//   display: none;
+// }
+.dropdown-btn.active {
+  background-color: aqua;
+  color: sandybrown;
+}
+// sub-dropdown-btn.active {
+//   background-color: yellow;
+//   color: aquamarine;
+// }
 
 /*SCROLLBAR*////////////////////////////////////
 
@@ -299,14 +311,10 @@ footer {
     display: block;
     border-radius: 0px;
   }
-  .project-name {
-    text-align: left;
-  }
+  
   .hamburger-menu {
     display: none;
   }
-  
-  
 
 }
 

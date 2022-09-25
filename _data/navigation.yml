@@ -1,7 +1,7 @@
 docs_list_title: AccountsIQ
 docs:
   - page: Overview
-    url: pages/overview/
+    # url: pages/overview/
     class: fa-solid fa-house-user
     caret: fa-solid fa-caret-down
     subfolderitems:
@@ -12,7 +12,7 @@ docs:
         url: pages/authentication/
         class: fa-solid fa-house-user
   - page: Reference
-    url: pages/reference/
+    # url: pages/reference/
     class: fa-solid fa-house-user
     caret: fa-solid fa-caret-down      
     subfolderitems:
