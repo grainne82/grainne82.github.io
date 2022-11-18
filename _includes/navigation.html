@@ -57,3 +57,37 @@
          </nav>   
    </body>
 </html>
+
+<script>
+   ////DROPDOWN WITH TWO LEVELS////
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+var subdropdown = document.getElementsByClassName("sub-dropdown-btn");
+var i;
+
+for (i = 0; i < subdropdown.length; i++) {
+  subdropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var subdropdownContent = this.nextElementSibling;
+    if (subdropdownContent.style.display === "block") {
+      subdropdownContent.style.display = "none";
+    } else {
+      subdropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
