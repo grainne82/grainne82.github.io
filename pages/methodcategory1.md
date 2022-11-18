@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Method Cathegory 1
 layout: default
 permalink: pages/category1/

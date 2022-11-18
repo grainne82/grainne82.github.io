@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Method 2
 layout: default
 permalink: pages/method2/
