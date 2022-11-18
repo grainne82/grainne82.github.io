@@ -6,10 +6,10 @@ docs:
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: About
-        url: pages/about/
+        url: /pages/about/
         class: fa-solid fa-house-user
       - page: Authentication
-        url: pages/authentication/
+        url: /pages/authentication/
         class: fa-solid fa-house-user
   - page: Reference
     # url: pages/reference/
@@ -17,13 +17,13 @@ docs:
     caret: fa-solid fa-caret-down      
     subfolderitems:
       - page: Category Overview
-        url: pages/category1/
+        url: /pages/category1/
         class: fa-solid fa-house-user
         caret: fa-solid fa-caret-down 
         subsubfolderitems:
           - page: Method 1
-            url: pages/method1/
+            url: /pages/method1/
           - page: Method 2
-            url: pages/method2/
+            url: /pages/method2/
        
   

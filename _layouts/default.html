@@ -11,7 +11,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://kit.fontawesome.com/75a3ff46b4.js" crossorigin="anonymous"></script>
-    <!-- <script src="assets/js/javascripts/main.js" defer></script> -->
     {% include head-custom.html %}
   </head>
   <body>
@@ -21,7 +20,7 @@
       <header class="page-header" role="banner">
         <div class="company">
           <div class="project-name">
-            <a href="#" >
+            <a href="{{ '/index/' | absolute_url }}">
               <span class="name-main hover">Accounts</span>
               <span class="name-accent hover">IQ</span>
             </a>
@@ -63,10 +62,9 @@
   </body>
 </html>
 
+ <!-- ///HAMBURGER MENU/////// -->
 
 <script>
-  ///HAMBURGER MENU///////
-
 const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
 const navLinks = document.getElementsByClassName('nav-container')[0];
 const sideNav = document.getElementsByClassName('sidenavContainer')[0];
