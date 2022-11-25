@@ -16,17 +16,12 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
+
+
+
     <div class="header-container">
       <header class="page-header" role="banner">
-        <div class="company">
-          <div class="project-name">
-            <a href="{{ '/index/' | absolute_url }}">
-              <span class="name-main hover">Accounts</span>
-              <span class="name-accent hover">IQ</span>
-            </a>
-          </div>
-        </div>
-        <div class="nav-container">
+        <div class="top-nav-container">
           <nav>
             <ul>
               <li><a href="https://www.accountsiq.com/">Link</a></li>
@@ -36,6 +31,15 @@
             </ul>
           </nav>
         </div>
+        <div class="company">
+          <div class="project-name">
+            <a href="{{ '/index/' | absolute_url }}">
+              <span class="name-main hover">Accounts</span>
+              <span class="name-accent hover">IQ</span>
+            </a>
+          </div>
+        </div>
+
         <div >
           <a href="#"class="hamburger-menu">
             <div class="toggle-icon bars">
@@ -58,7 +62,7 @@
         <div class="article">{{ content }}</div>
       </main>
     </div>
-    <footer class="site-footer">AccountsIQ 2022</footer>
+    <footer class="site-footer">AccountsIQ 2023</footer>
   </body>
 </html>
 
@@ -66,7 +70,7 @@
 
 <script>
 const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
-const navLinks = document.getElementsByClassName('nav-container')[0];
+const navLinks = document.getElementsByClassName('top-nav-container')[0];
 const sideNav = document.getElementsByClassName('sidenavContainer')[0];
 const article = document.getElementsByClassName('article')[0];
 const navToggle = document.getElementsByClassName('hamburger-menu')[0];
