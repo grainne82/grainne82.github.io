@@ -62,21 +62,24 @@
         <div class="article">{{ content }}</div>
       </main>
     </div>
-    <footer class="site-footer">AccountsIQ 2023</footer>
+    <div class="footerContainer">
+      <footer class="site-footer">AccountsIQ 2023</footer>
+    </div>
+    
   </body>
 </html>
 
- <!-- ///HAMBURGER MENU/////// -->
+ <!-- ==========================HAMBURGER MENU======================================================== -->
 
 <script>
 const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
-const navLinks = document.getElementsByClassName('top-nav-container')[0];
+// const navLinks = document.getElementsByClassName('top-nav-container')[0];
 const sideNav = document.getElementsByClassName('sidenavContainer')[0];
 const article = document.getElementsByClassName('article')[0];
 const navToggle = document.getElementsByClassName('hamburger-menu')[0];
 
 hamburgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active')
+    // navLinks.classList.toggle('active')
     sideNav.classList.toggle('active')
     article.classList.toggle('active')
     navToggle.classList.toggle('active')
@@ -85,7 +88,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 window.addEventListener("resize", () => {
     if(document.body.clientWidth > 769) {
-       navLinks.classList.remove('active')
+      //  navLinks.classList.remove('active')
        sideNav.classList.remove('active') 
        article.classList.remove('active')
        navToggle.classList.remove('active')

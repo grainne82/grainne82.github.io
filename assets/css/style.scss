@@ -3,11 +3,7 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 
-// fonts//
-* {
-  font-family: 'Sora';
-}
-//reset//
+//=======================================reset=============================================================
 .main-container,
 .page-header,
 .main-content,
@@ -17,7 +13,20 @@
   margin: 0;
   padding: 0;
 }
-//content container//
+
+//======================================typography=========================================================
+* {
+  font-family: 'Sora';
+}
+a {
+  color: #425eff;
+}
+a:hover {
+  color: #425eff80;
+  text-decoration: none;
+}
+
+//=======================================layout============================================================
 .main-content{
   display: flex;
   flex-direction: column;
@@ -26,15 +35,6 @@
   max-width: 100%;
   align-items: flex-start;
 }
-//links//
-a {
-  color: #425eff;
-}
-a:hover {
-  color: #425eff80;
-  text-decoration: none;
-}
-//company header with top links//
 .page-header {
   position: relative;
   background: #fff;
@@ -43,63 +43,89 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 6rem;
 }
 .header {
   position: relative;
  }
-
- ///////////////////company name/////////////////////////////////////////////////////////////////////
+ .sidenavContainer {
+  background: #eef1fe;
+  width: 70%;
+  min-width: 270px;
+  display:none;
+  margin: auto;
+  border-radius: 10px;
+  height: 400px;
+  overflow-y: auto;
+}
+.sidenavContainer.active {
+  display: block;
+  margin-top: 1rem;
+}
+.sidenav {
+  width:100%; 
+}
+.article {
+  width: 100%;
+  padding-top: 0.5em;
+  padding-left: 1em;
+}
+ //=================================================company title==============================================
 .company {
   width: 100%;
   height:6rem;
   display:flex;
-  border-bottom: 2px solid #f1f5fc;
+  // border-bottom: 2px solid #f1f5fc;
   align-items: center;
-
+  order: 1;
 }
 .project-name {
   width:100%;
   text-align: left;
-  margin-left: 1rem;
-  
+  margin-left: 1rem; 
 }
 .project-name a {
   display: flex;
 }
-
 .project-name a .name-main {
-  color: #425eff;
-  
+  color: #425eff; 
 }
 .project-name a .name-accent {
   color: #162c5e;
   font-weight: 600;
 }
-.project-name a:hover .hover {
+.project-name a:hover .hover{
   opacity: 0.8;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-////topnav links///////////////////////////////////////////////////////////////
- .top-nav-container {
-  width:80%;
-  display: none;
- }
-
-.top-nav-container nav ul {
+//=============================================topnav links======================================================
+.top-nav-container {
   width:100%;
+  border-bottom: 2px solid #f1f5fc;
+  order: 2;
+  margin-left: 2rem;
+  // display: none;
+  display:flex;
+  align-items: flex-end;
+ }
+ .top-nav-container nav {
+  width: 100%;
+  display: flex;
+ }
+.top-nav-container nav ul {
+  width:60%;
   display: flex;
   list-style: none;
-  justify-content: space-evenly;
   flex-direction: row;
   margin: 0; 
-  padding: 0; 
+  padding: 0;
 }
 .top-nav-container nav ul li {
   width: 100%;
+  text-align: left;
 }
-
 .top-nav-container li a {
-   color: rgb(97, 93, 102);
+   color: #162c5e;
    font-size: .875rem;
    font-weight: 400;
    text-decoration: none;
@@ -109,9 +135,9 @@ a:hover {
    line-height: 1.5rem;
 }
 .top-nav-container a:hover {
-  color:#425eff;
+  color: #425eff;
 }
-//hamburger menu///////////////////////////////////////////////////////////////////////////////////////////
+//==========================================hamburger menu=======================================================
 .hamburger-menu .bars {
   position:absolute;
   top: 1.5rem;
@@ -130,6 +156,9 @@ a:hover {
   background-color: #162c5e;
   border-radius: 10px;
 }
+//  .hamburger-menu .bars:hover .hover {
+//   background-color: #425eff;
+// } 
 .top-nav-container.active {
   display: block;
 }
@@ -140,175 +169,138 @@ a:hover {
 .hamburger-menu.active .bars .hamburger-top {
   transform: rotate(-45deg);
   position: absolute;
+  background-color: #425eff;
 }
 .hamburger-menu.active .bars .hamburger-bottom {
   transform: rotate(45deg);
-  position: absolute; 
+  position: absolute;
+  background-color: #425eff; 
+}
+ .dropdown-btn.active .fa-caret-down {
+  transform: rotate(180deg);
 }
 
-/*SIDENAV GENERAL*///////////////////////////////////////////////////////////////////////////////////
+//====================================================sidenav links styling=======================================
 
-/*NAV AREA*/
-.sidenavContainer {
-  background: #eef1fe;
-  width: 70%;
-  min-width: 290px;
-  display:none;
-  margin: auto;
-  border-radius: 10px;
-  height: 200px;
-  overflow-y: scroll;
-}
-.sidenavContainer.active {
-  display: block;
-  margin-top: 1rem;
-}
-
-/*SIDENAV LINKS LIST*/
-.sidenav {
-  width:100%; 
-}
 .sidenav ul, 
 .sidenav li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.item::after{
-  border-bottom: 1px solid #f1f5fc;
-  width: 95%;
-  content: '';
-  position: absolute;
-  width: 97%;
-  bottom: 0;
-  left:1.5%;
-
+.sub-nav-links {
+  display: none;
 }
-.item, .sub-item {
-  position: relative;
+.dropdown-btn.active {
+  background-color:#e4e7f3;
 }
-///////dropdown container///////
+.sidenav a {
+  color:#162c5e;
+  width: 100%;
+  display: inline-block;
+}
 .dropdown-btn {
-
+  display: block;
 }
+.dropdown-btn:hover,
+.item-text:hover,
+.sub-item-text:hover,
+.sub-sub-item-text:hover {
+  background: #e4e7f3;
+  width: 100%;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  color: #425eff;
+}
+.sidenav i {
+  color: #425eff80;
+}
+
+//bottom border//
+// .item::after{
+//   border-bottom: 1px solid #f1f5fc;
+//   width: 95%;
+//   content: '';
+//   position: absolute;
+//   width: 97%;
+//   bottom: 0;
+//   left:1.5%;
+// }
+// .item, .sub-item {
+//   position: relative;
+// }
+
+//sidenav links layout//
+//first-level individual//
 .dropdown-btn .item {
   display: flex;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 1.5rem 0.25rem 2.5rem;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
-
-.dropdown-btn:hover {
-  background: pink;
-}
+//open dropdown//
 .sidenav .sub-nav-links {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
+//dropdown nested list//
+.sub-dropdown-btn,
 .sub-sub-nav-links {
-  padding-top: 0.5rem;
+  padding: 0.5rem 0;
 }
 
-/*NAV LINK HOVER*/
-.sidenav a {
-  color:#425eff;
-  width: 100%;
-  display: inline-block;
-  // padding-left: 1.5%;
-  // padding-right: 1.5%;
-}
-
-.item a:hover,
-.sub-item-top-item a:hover,
-.sub-sub-item a:hover {
-  background: gray;
-  width: 100%;
-  color:#162c5e; 
-  transition: 0.2s ease-out;
-}
-
-/*NAV LINK TEXT*/
+//sidenav links typography//
 .item-text {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-  width: 100%;
-  display: block;
- 
-}
-.sub-item-text {
-  font-size: 1rem;
-  line-height: 1.125rem;
-  // margin-left: 1rem;
-  padding: 0.25rem 1rem 0.25rem 4rem;
-  font-weight:600;
-  width: 100%;
-  display: block;
- 
-}
-.sub-sub-item-text { 
-  font-size: 1rem;
-  line-height: 1.125rem;
-  // margin-left: 5rem;
-  padding: 0.2rem 1rem 0.2rem 4rem;
+  font-size: 0.95rem;
+  line-height: 2rem;
   font-weight: 500;
   width: 100%;
   display: block;
+  color:#162c5e;
 }
-.sub-nav-links {
-  display: none;
+.sub-item-text {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  padding: 0.25rem 1.5rem 0.25rem 4.5rem;
+  font-weight:400;
+  width: 100%;
+  display: block;
 }
-// .sub-sub-nav-links {
-//   display: none;
-// }
-.dropdown-btn.active {
-  background-color: #fff;
-  color: #162c5e;
+.sub-sub-item-text { 
+  font-size: 0.85rem;
+  line-height: 1.125rem;
+  padding: 0.2rem 1.5rem 0.2rem 5.5rem;
+  font-weight: 300;
+  width: 100%;
+  display: block;
+  color: #162c5e80;
 }
-// sub-dropdown-btn.active {
-//   background-color: yellow;
-//   color: aquamarine;
-// }
-
-/*SCROLLBAR*////////////////////////////////////
-
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #162c5e;
-  border-radius: 100vw;
-  margin-block: 0.5em;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #425eff;
-  border-radius: 20px;
-  
-}
-
-/*ICONS*/
-.i {
-
-
-
-}
-
+//sidenav icons//
 .fa-house-user {
   margin-right: 1rem;
- 
+  font-size: .8rem;
 }
 .fa-caret-down {
-  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: .8rem;
 }
 
-/*ARTICLE*/
-.article {
-  width: 100%;
-  padding-top: 0.5em;
-  padding-left: 1em;
-}
+///========================================scrollbar======================================================
+// *::-webkit-scrollbar {
+//   width: 8px;
+// }
+// *::-webkit-scrollbar-track {
+//   background: #162c5e;
+//   border-radius: 100vw;
+//   margin-block: 0.5em;
+// }
+// *::-webkit-scrollbar-thumb {
+//   background-color: #425eff;
+//   border-radius: 20px;  
+// }
+
+//================================================article=======================================================
+
 .article h1,
 .article h2,
 .article h3 {
@@ -317,60 +309,52 @@ a:hover {
 .article.active {
   display: none;
 }
-/*FOOTER*/
-footer {
-  text-align: center;
-  position:fixed;
-  left: 0;
-  bottom: 0;
+//================================================footer========================================================
+.footerContainer {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   z-index: 1;
   background: #fff;
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+.site-footer {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-/*MEDIA QUERIES*/
+//=================================================media queries================================================
 @media  only screen and (min-width: 42em){
-  .page-header, .main-content {
+  .main-content {
     flex-direction: row; 
   }
-  .page-header {
-    // justify-content: space-between;
-    height: 6rem;
-    flex-direction: column;
-  }
-  .top-nav-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    border-bottom: 2px solid #f1f5fc;
-  }
-
-  .company {
-    // border:none;
+    .company {
+    order: 2;
   }
   .project-name {
     font-size: 2.25em;
   }
-  .top-nav-container{
-    // // width: 300px;
+  .top-nav-container {
+    order: 1;
     // display: block;
-    // justify-content: space-between;
+  }
+  .top-nav-container nav {
+    justify-content: flex-end;
   }
   .top-nav-container nav ul{
-  }
-  nav ul li {
-    padding-right: 1.5rem;;
+    width: 40%;
   }
   .sidenavContainer {
-    height: 100vh;
-    width: 29rem;
+    height: 100%;
+    max-width: 300px;
     display: block;
     border-radius: 0px;
-  }
-  
+  } 
   .hamburger-menu {
     display: none;
   }
-
 }
 

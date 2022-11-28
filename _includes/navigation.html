@@ -13,11 +13,9 @@
 
                   <div class=dropdown-btn> 
                      <li class="item">
-                        <!-- <a href="{{ item.url }}"> -->
                            <i class="{{ item.class }}"></i>
                            <span class="item-text"> {{ item.page }}</span>
                            <i class="{{ item.caret }}"></i>
-                        <!-- </a> -->
                      </li>
                   </div>
 
@@ -26,13 +24,10 @@
                            {% for entry in item.subfolderitems %}
                               <div class=sub-dropdown-btn>
                                  <li class="sub-item">
-                                    <div class="sub-item-top-item">
-                                       <a href="{{ entry.url }}">
-                                          <!-- <i class="{{ entry.class }}"></i> -->
-                                          <!-- <i class="{{ entry.caret }}"></i> -->
-                                          <span class="sub-item-text"> {{ entry.page }}</span> 
-                                       </a>
-                                    </div>
+                                    <a href="{{ entry.url }}">
+                                       <span class="sub-item-text"> {{ entry.page }}</span> 
+                                    </a>
+
 
                                  {% if entry.subsubfolderitems[0] %}
                                     <ul class="sub-sub-nav-links">
@@ -76,18 +71,18 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
-var subdropdown = document.getElementsByClassName("sub-dropdown-btn");
-var i;
+// var subdropdown = document.getElementsByClassName("sub-dropdown-btn");
+// var i;
 
-for (i = 0; i < subdropdown.length; i++) {
-  subdropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var subdropdownContent = this.nextElementSibling;
-    if (subdropdownContent.style.display === "block") {
-      subdropdownContent.style.display = "none";
-    } else {
-      subdropdownContent.style.display = "block";
-    }
-  });
-}
+// for (i = 0; i < subdropdown.length; i++) {
+//   subdropdown[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var subdropdownContent = this.nextElementSibling;
+//     if (subdropdownContent.style.display === "block") {
+//       subdropdownContent.style.display = "none";
+//     } else {
+//       subdropdownContent.style.display = "block";
+//     }
+//   });
+// }
 </script>
