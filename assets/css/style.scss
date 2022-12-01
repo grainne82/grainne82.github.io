@@ -4,10 +4,13 @@
 @import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 
 //=======================================reset=============================================================
+html {
+  scroll-behavior: smooth;
+}
 .main-container,
 .page-header,
 .main-content,
-.sidenavContainer,
+.sidenav-container,
 .article {
   box-sizing: border-box;
   margin: 0;
@@ -34,21 +37,25 @@ a:hover {
   height: 100vh;
   max-width: 100%;
   align-items: flex-start;
+  justify-content: space-between;
+}
+.header-container {
+  position: sticky;
+  top:0;
+  z-index: 20;
 }
 .page-header {
-  position: relative;
   background: #fff;
   background-image: none;
   width: 100%;
+  top:0;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 6rem;
+ 
 }
-.header {
-  position: relative;
- }
- .sidenavContainer {
+ .sidenav-container {
   background: #eef1fe;
   width: 70%;
   min-width: 270px;
@@ -58,7 +65,7 @@ a:hover {
   height: 400px;
   overflow-y: auto;
 }
-.sidenavContainer.active {
+.sidenav-container.active {
   display: block;
   margin-top: 1rem;
 }
@@ -73,33 +80,34 @@ a:hover {
  //=================================================company title==============================================
 .company {
   width: 100%;
-  height:6rem;
+  height:4rem;
   display:flex;
   // border-bottom: 2px solid #f1f5fc;
   align-items: center;
   order: 1;
 }
-.project-name {
+.company-name {
   width:100%;
   text-align: left;
-  margin-left: 1rem; 
+  margin-left: 1rem;
+  font-size: 1.75rem; 
 }
-.project-name a {
+.company-name a {
   display: flex;
 }
-.project-name a .name-main {
-  color: #425eff; 
+.name-main {
+  color: #425eff;
 }
-.project-name a .name-accent {
+.name-accent {
   color: #162c5e;
   font-weight: 600;
 }
-.project-name a:hover .hover{
+.company-name a:hover .hover{
   opacity: 0.8;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 //=============================================topnav links======================================================
-.top-nav-container {
+.topnav-container {
   width:100%;
   border-bottom: 2px solid #f1f5fc;
   order: 2;
@@ -108,11 +116,11 @@ a:hover {
   display:flex;
   align-items: flex-end;
  }
- .top-nav-container nav {
+ .topnav {
   width: 100%;
   display: flex;
  }
-.top-nav-container nav ul {
+.topnav-links {
   width:60%;
   display: flex;
   list-style: none;
@@ -120,11 +128,11 @@ a:hover {
   margin: 0; 
   padding: 0;
 }
-.top-nav-container nav ul li {
+.topnav-links li {
   width: 100%;
   text-align: left;
 }
-.top-nav-container li a {
+.topnav-links a {
    color: #162c5e;
    font-size: .875rem;
    font-weight: 400;
@@ -134,11 +142,14 @@ a:hover {
    padding: .25rem 0rem;
    line-height: 1.5rem;
 }
-.top-nav-container a:hover {
+.topnav-links a:hover {
   color: #425eff;
 }
+.topnav-container.active {
+  display: block;
+}
 //==========================================hamburger menu=======================================================
-.hamburger-menu .bars {
+.bars {
   position:absolute;
   top: 1.5rem;
   right: 2rem;
@@ -148,37 +159,29 @@ a:hover {
   width: 30px;
   height: 30px;
 }
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
+.bar {
   height: 3px;
   width: 100%;
   background-color: #162c5e;
   border-radius: 10px;
 }
-//  .hamburger-menu .bars:hover .hover {
-//   background-color: #425eff;
-// } 
-.top-nav-container.active {
-  display: block;
-}
-
-.hamburger-menu.active .bars .hamburger-middle {
+a:hover .bars .bar {
+  background-color: #425eff;
+} 
+.hamburger-menu.active .hamburger-middle {
   display: none;
 }
-.hamburger-menu.active .bars .hamburger-top {
+.hamburger-menu.active .hamburger-top {
   transform: rotate(-45deg);
   position: absolute;
   background-color: #425eff;
 }
-.hamburger-menu.active .bars .hamburger-bottom {
+.hamburger-menu.active .hamburger-bottom {
   transform: rotate(45deg);
   position: absolute;
   background-color: #425eff; 
 }
- .dropdown-btn.active .fa-caret-down {
-  transform: rotate(180deg);
-}
+
 
 //====================================================sidenav links styling=======================================
 
@@ -188,101 +191,84 @@ a:hover {
   padding: 0;
   margin: 0;
 }
-.sub-nav-links {
+.subnav-contents {
   display: none;
 }
-.dropdown-btn.active {
-  background-color:#e4e7f3;
+.dropdown {
+  display: block;
+}
+.dropdown.active {
+  background:#e4e7f3;
 }
 .sidenav a {
   color:#162c5e;
   width: 100%;
   display: inline-block;
 }
-.dropdown-btn {
-  display: block;
+.subnav-contents,
+.sub-dropdown,
+.sub-subnav-contents {
+  padding: 0.5rem 0;
 }
-.dropdown-btn:hover,
-.item-text:hover,
-.sub-item-text:hover,
-.sub-sub-item-text:hover {
+.nav-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1.5rem 0.25rem 2.5rem;
+  align-items: center;
+  width: 100%;
+  font-size: 0.95rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color:#162c5e; 
+}
+.nav-text-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subnav-text {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  padding: 0.25rem 1.5rem 0.25rem 4.5rem;
+  font-weight:400;
+  width: 100%;
+  display: inline-block;
+}
+.sub-subnav-text { 
+  font-size: 0.85rem;
+  line-height: 1.125rem;
+  padding: 0.2rem 1.5rem 0.2rem 5.5rem;
+  font-weight: 300;
+  width: 100%;
+  display: inline-block;
+  color: #162c5e80;
+}
+.nav-text:hover,
+.subnav-text:hover,
+.sub-subnav-text:hover {
   background: #e4e7f3;
   width: 100%;
   transition: 0.2s ease-out;
   cursor: pointer;
   color: #425eff;
 }
+//sidenav icons//
 .sidenav i {
   color: #425eff80;
 }
-
-//bottom border//
-// .item::after{
-//   border-bottom: 1px solid #f1f5fc;
-//   width: 95%;
-//   content: '';
-//   position: absolute;
-//   width: 97%;
-//   bottom: 0;
-//   left:1.5%;
-// }
-// .item, .sub-item {
-//   position: relative;
-// }
-
-//sidenav links layout//
-//first-level individual//
-.dropdown-btn .item {
-  display: flex;
-  padding: 0.25rem 1.5rem 0.25rem 2.5rem;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-}
-//open dropdown//
-.sidenav .sub-nav-links {
-  padding: 0.5rem 0;
-}
-//dropdown nested list//
-.sub-dropdown-btn,
-.sub-sub-nav-links {
-  padding: 0.5rem 0;
-}
-
-//sidenav links typography//
-.item-text {
-  font-size: 0.95rem;
-  line-height: 2rem;
-  font-weight: 500;
-  width: 100%;
-  display: block;
-  color:#162c5e;
-}
-.sub-item-text {
-  font-size: 0.9rem;
-  line-height: 1.125rem;
-  padding: 0.25rem 1.5rem 0.25rem 4.5rem;
-  font-weight:400;
-  width: 100%;
-  display: block;
-}
-.sub-sub-item-text { 
-  font-size: 0.85rem;
-  line-height: 1.125rem;
-  padding: 0.2rem 1.5rem 0.2rem 5.5rem;
-  font-weight: 300;
-  width: 100%;
-  display: block;
-  color: #162c5e80;
-}
-//sidenav icons//
 .fa-house-user {
-  margin-right: 1rem;
   font-size: .8rem;
+  padding-right: 1rem;
 }
 .fa-caret-down {
-  margin-right: 1rem;
   font-size: .8rem;
+
+}
+// .fa-caret-down::after {
+//   padding-left: 1rem;
+// }
+.dropdown.active .fa-caret-down {
+  transform: rotate(180deg);
 }
 
 ///========================================scrollbar======================================================
@@ -309,16 +295,22 @@ a:hover {
 .article.active {
   display: none;
 }
+.article {
+  background: palegoldenrod;
+}
 //================================================footer========================================================
-.footerContainer {
+.footer-container {
   display: flex;
   flex-direction: row;
+  position:fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   background: #fff;
-  height: 10rem;
+  height: 5rem;
   align-items: center;
   justify-content: center;
+  bottom: 0;
+  background: greenyellow;
 }
 .site-footer {
   margin: 0;
@@ -331,27 +323,36 @@ a:hover {
   .main-content {
     flex-direction: row; 
   }
-    .company {
-    order: 2;
+  .page-header {
+    flex-direction: row;
+    height: 4rem;
+    border-bottom: 2px solid #f1f5fc;
   }
-  .project-name {
-    font-size: 2.25em;
-  }
-  .top-nav-container {
-    order: 1;
-    // display: block;
-  }
-  .top-nav-container nav {
-    justify-content: flex-end;
-  }
-  .top-nav-container nav ul{
+  .company {
     width: 40%;
-  }
-  .sidenavContainer {
+    align-items: center;
+    justify-content: flex-start;
+    height:100%;
+   }
+  .topnav-container {
     height: 100%;
-    max-width: 300px;
+    align-items: center;
+    width: 60%;
+    border: none;
+  }
+  .topnav-links {
+    width:100%;
+  }
+  .sidenav-container {
+    // height: 100%;
+    // max-width: 300px;
+    width: 20%;
     display: block;
     border-radius: 0px;
+    overflow-y: auto;
+    height:100vh;
+    position: fixed;
+    left: 0;
   } 
   .hamburger-menu {
     display: none;

@@ -15,5 +15,94 @@ I like flowers.
 
 This is an example of my [work](pages/brochure-web.pdf).
 
+```
+function add(a, b){
+   return a + b;
+}
+add(3, 4);
+```
+```JavaScript
+function add(a, b){
+   return a + b;
+}
+add(3, 4);
+```
+Use `print("Hello, world!")` to print a message to the screen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sssssssssssssssss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ssssssssssssssssssssssssssss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
+sssssssssssssssssssssssssssssssssssssssss
+
+
+
+
+
+
+
+
+
+
+
 
 
