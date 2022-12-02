@@ -12,14 +12,14 @@
                {% for item in site.data.navigation.docs %}
 
                   <div class=dropdown> 
-                     <li class="nav-link">
-                           <span class="nav-text">
-                              <div class="nav-text-left">
+                     <li class="button-link">
+                           <button class="button-text">
+                              <div class="button-text-left">
                               <i class="{{ item.class }}"></i>
                                  <span class="dropdown-title" >{{item.page }}</span>
                               </div>
                                  <i class="{{ item.caret }}"></i>
-                           </span>
+                           </button>
                      </li>
                   </div>
 

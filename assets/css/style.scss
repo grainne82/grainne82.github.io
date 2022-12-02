@@ -194,10 +194,10 @@ a:hover .bars .bar {
 .subnav-contents {
   display: none;
 }
-.dropdown {
-  display: block;
+.dropdown .button-text {
+  background: #eef1fe;
 }
-.dropdown.active {
+.dropdown.active .button-text {
   background:#e4e7f3;
 }
 .sidenav a {
@@ -210,7 +210,7 @@ a:hover .bars .bar {
 .sub-subnav-contents {
   padding: 0.5rem 0;
 }
-.nav-text {
+.button-text {
   display: flex;
   justify-content: space-between;
   padding: 0.25rem 1.5rem 0.25rem 2.5rem;
@@ -219,9 +219,10 @@ a:hover .bars .bar {
   font-size: 0.95rem;
   line-height: 2rem;
   font-weight: 500;
-  color:#162c5e; 
+  color:#162c5e;
+  border:none;
 }
-.nav-text-left {
+.button-text-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,7 +244,7 @@ a:hover .bars .bar {
   display: inline-block;
   color: #162c5e80;
 }
-.nav-text:hover,
+.button-text:hover,
 .subnav-text:hover,
 .sub-subnav-text:hover {
   background: #e4e7f3;
@@ -296,7 +297,6 @@ a:hover .bars .bar {
   display: none;
 }
 .article {
-  background: palegoldenrod;
 }
 //================================================footer========================================================
 .footer-container {
@@ -310,7 +310,6 @@ a:hover .bars .bar {
   align-items: center;
   justify-content: center;
   bottom: 0;
-  background: greenyellow;
 }
 .site-footer {
   margin: 0;
@@ -344,16 +343,18 @@ a:hover .bars .bar {
     width:100%;
   }
   .sidenav-container {
-    // height: 100%;
-    // max-width: 300px;
-    width: 20%;
+    max-width: 300px;
+    width: 300px;
     display: block;
     border-radius: 0px;
     overflow-y: auto;
     height:100vh;
     position: fixed;
     left: 0;
-  } 
+  }
+  .article {
+    margin-left: 300px;
+  }
   .hamburger-menu {
     display: none;
   }
