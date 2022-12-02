@@ -34,15 +34,16 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
   max-width: 100%;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 6rem;
 }
 .header-container {
-  position: sticky;
+  position: fixed;
   top:0;
-  z-index: 20;
+  z-index: 50;
+  width:100%;
 }
 .page-header {
   background: #fff;
@@ -52,8 +53,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 6rem;
- 
+  height: 6rem; 
 }
  .sidenav-container {
   background: #eef1fe;
@@ -67,15 +67,13 @@ a:hover {
 }
 .sidenav-container.active {
   display: block;
-  margin-top: 1rem;
 }
 .sidenav {
   width:100%; 
 }
 .article {
   width: 100%;
-  padding-top: 0.5em;
-  padding-left: 1em;
+  padding: 2em 0em 10em 2em;
 }
  //=================================================company title==============================================
 .company {
@@ -84,7 +82,6 @@ a:hover {
   display:flex;
   // border-bottom: 2px solid #f1f5fc;
   align-items: center;
-  order: 1;
 }
 .company-name {
   width:100%;
@@ -102,7 +99,7 @@ a:hover {
   color: #162c5e;
   font-weight: 600;
 }
-.company-name a:hover .hover{
+.company-name a:hover .hover-color {
   opacity: 0.8;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -110,7 +107,6 @@ a:hover {
 .topnav-container {
   width:100%;
   border-bottom: 2px solid #f1f5fc;
-  order: 2;
   margin-left: 2rem;
   // display: none;
   display:flex;
@@ -263,11 +259,7 @@ a:hover .bars .bar {
 }
 .fa-caret-down {
   font-size: .8rem;
-
 }
-// .fa-caret-down::after {
-//   padding-left: 1rem;
-// }
 .dropdown.active .fa-caret-down {
   transform: rotate(180deg);
 }
@@ -297,7 +289,41 @@ a:hover .bars .bar {
   display: none;
 }
 .article {
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
 }
+.article-contents {
+  order:2;
+}
+.in-this-article {
+  order: 1;
+  padding-bottom: 1.5rem;
+}
+//===========================================tables========================================================
+.table-container {
+  width: 90%;
+  overflow-x: auto;
+}
+th {
+  font-size: .9rem;
+  font-weight: 500;
+}
+td {
+  font-size: .85rem;
+  font-weight: 300;
+}
+//==============================================definition-lists===============================================
+dl {
+  font-size: 1rem;
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  font-weight: 400;
+}
+
 //================================================footer========================================================
 .footer-container {
   display: flex;
@@ -320,10 +346,15 @@ a:hover .bars .bar {
 //=================================================media queries================================================
 @media  only screen and (min-width: 42em){
   .main-content {
-    flex-direction: row; 
+    flex-direction: row;
+    margin-top: 4rem;
+  }
+  .main-content p {
+    font-size: 1rem;
   }
   .page-header {
     flex-direction: row;
+    justify-content: space-between;
     height: 4rem;
     border-bottom: 2px solid #f1f5fc;
   }
@@ -336,11 +367,14 @@ a:hover .bars .bar {
   .topnav-container {
     height: 100%;
     align-items: center;
-    width: 60%;
+    width: 50%;
     border: none;
   }
   .topnav-links {
     width:100%;
+  }
+  .topnav-links li {
+    text-align: right;
   }
   .sidenav-container {
     max-width: 300px;
@@ -354,7 +388,18 @@ a:hover .bars .bar {
   }
   .article {
     margin-left: 300px;
+    margin-right: 300px;;
+    width: 100%;
+    // flex-direction: row;
   }
+  // .article-contents {
+  //     order: 1;
+  // }
+  // .in-this-article {
+  //   order: 2;
+  //   width: 300px;
+  //   padding-left: 1rem;
+  // }
   .hamburger-menu {
     display: none;
   }

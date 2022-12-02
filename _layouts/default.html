@@ -15,12 +15,16 @@
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-
-
-
-
     <div class="header-container">
       <header class="page-header" role="banner">
+        <div class="company">
+          <div class="company-name">
+            <a href="{{ '/index/' | absolute_url }}">
+              <span class="name-main hover-color">Accounts</span>
+              <span class="name-accent hover-color">IQ</span>
+            </a>
+          </div>
+        </div>        
         <div class="topnav-container">
           <nav class="topnav">
             <ul class="topnav-links">
@@ -31,14 +35,7 @@
             </ul>
           </nav>
         </div>
-        <div class="company">
-          <div class="company-name">
-            <a href="{{ '/index/' | absolute_url }}">
-              <span class="name-main hover">Accounts</span>
-              <span class="name-accent hover">IQ</span>
-            </a>
-          </div>
-        </div>
+
 
         <div >
           <a href="#"class="hamburger-menu">
@@ -59,7 +56,15 @@
       <main id="content" class="main-content" role="main">
       
         <div class="sidenav-container">{% include navigation.html %}</div>
-        <div class="article">{{ content }}</div>
+        <div class="article">
+          <div class="article-contents">{{ content }} </div>
+          <div class="in-this-article">
+            <h3>In this article</h3>
+            <li></li>
+            <li></li>
+            <li></li>
+          </div>
+        </div>
       </main>
     </div>
     <div class="footer-container">
@@ -77,12 +82,14 @@ const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
 const sideNav = document.getElementsByClassName('sidenav-container')[0];
 const article = document.getElementsByClassName('article')[0];
 const navToggle = document.getElementsByClassName('hamburger-menu')[0];
+// const sidePanel = document.getElementsByClassName('in-this-article')[0];
 
 hamburgerMenu.addEventListener('click', () => {
     // navLinks.classList.toggle('active')
     sideNav.classList.toggle('active')
     article.classList.toggle('active')
     navToggle.classList.toggle('active')
+    // sidePanel.classList.toggle('active')
     })
 
 
@@ -92,6 +99,7 @@ window.addEventListener("resize", () => {
        sideNav.classList.remove('active') 
        article.classList.remove('active')
        navToggle.classList.remove('active')
+      //  sidePanel.classList.remove('active')
     }    
 })
 </script>
