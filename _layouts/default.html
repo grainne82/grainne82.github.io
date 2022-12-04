@@ -11,25 +11,23 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://kit.fontawesome.com/75a3ff46b4.js" crossorigin="anonymous"></script>
-    <!-- <script src="assets/js/javascripts/main.js" defer></script> -->
     {% include head-custom.html %}
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-
     <div class="header-container">
       <header class="page-header" role="banner">
         <div class="company">
-          <div class="project-name">
-            <a href="#" >
-              <span class="name-main hover">Accounts</span>
-              <span class="name-accent hover">IQ</span>
+          <div class="company-name">
+            <a href="{{ '/index/' | absolute_url }}">
+              <span class="name-main hover-color">Accounts</span>
+              <span class="name-accent hover-color">IQ</span>
             </a>
           </div>
-        </div>
-        <div class="nav-container">
-          <nav>
-            <ul>
+        </div>        
+        <div class="topnav-container">
+          <nav class="topnav">
+            <ul class="topnav-links">
               <li><a href="https://www.accountsiq.com/">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
@@ -37,6 +35,8 @@
             </ul>
           </nav>
         </div>
+
+
         <div >
           <a href="#"class="hamburger-menu">
             <div class="toggle-icon bars">
@@ -55,38 +55,51 @@
     <div class="main-container"> 
       <main id="content" class="main-content" role="main">
       
-        <div class="sidenavContainer">{% include navigation.html %}</div>
-        <div class="article">{{ content }}</div>
+        <div class="sidenav-container">{% include navigation.html %}</div>
+        <div class="article">
+          <div class="article-contents">{{ content }} </div>
+          <div class="in-this-article">
+            <h3>In this article</h3>
+            <li></li>
+            <li></li>
+            <li></li>
+          </div>
+        </div>
       </main>
     </div>
-    <footer class="site-footer">AccountsIQ 2022</footer>
+    <div class="footer-container">
+      <footer class="site-footer">AccountsIQ 2023</footer>
+    </div>
+    
   </body>
 </html>
 
+ <!-- ==========================HAMBURGER MENU======================================================== -->
 
 <script>
-  ///HAMBURGER MENU///////
-
 const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
-const navLinks = document.getElementsByClassName('nav-container')[0];
-const sideNav = document.getElementsByClassName('sidenavContainer')[0];
+// const navLinks = document.getElementsByClassName('topnav-container')[0];
+const sideNav = document.getElementsByClassName('sidenav-container')[0];
 const article = document.getElementsByClassName('article')[0];
 const navToggle = document.getElementsByClassName('hamburger-menu')[0];
+// const sidePanel = document.getElementsByClassName('in-this-article')[0];
 
 hamburgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active')
+    // navLinks.classList.toggle('active')
     sideNav.classList.toggle('active')
     article.classList.toggle('active')
     navToggle.classList.toggle('active')
+    // sidePanel.classList.toggle('active')
     })
 
 
 window.addEventListener("resize", () => {
     if(document.body.clientWidth > 769) {
-       navLinks.classList.remove('active')
+      //  navLinks.classList.remove('active')
        sideNav.classList.remove('active') 
        article.classList.remove('active')
        navToggle.classList.remove('active')
+      //  sidePanel.classList.remove('active')
     }    
 })
 </script>

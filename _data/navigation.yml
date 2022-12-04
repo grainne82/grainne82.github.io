@@ -1,29 +1,40 @@
 docs_list_title: AccountsIQ
 docs:
   - page: Overview
-    # url: pages/overview/
     class: fa-solid fa-house-user
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: About
-        url: pages/about/
-        class: fa-solid fa-house-user
+        url: /pages/about/
       - page: Authentication
-        url: pages/authentication/
-        class: fa-solid fa-house-user
+        url: /pages/authentication/
   - page: Reference
-    # url: pages/reference/
     class: fa-solid fa-house-user
     caret: fa-solid fa-caret-down      
     subfolderitems:
       - page: Category Overview
-        url: pages/category1/
-        class: fa-solid fa-house-user
-        caret: fa-solid fa-caret-down 
+        url: /pages/category1/
         subsubfolderitems:
           - page: Method 1
-            url: pages/method1/
+            url: /pages/method1/
           - page: Method 2
-            url: pages/method2/
-       
-  
+            url: /pages/method2/
+      - page: Testing
+        url: /pages/category1/
+        subsubfolderitems:
+          - page: Testing 1
+            url: /pages/method1/
+          - page: Testing 2
+            url: /pages/method2/ 
+      - page: Testing3
+        url: /pages/about/
+      - page: Testing4
+        url: /pages/authentication/    
+  - page: Testing2
+    class: fa-solid fa-house-user
+    caret: fa-solid fa-caret-down
+    subfolderitems:
+      - page: Testing2
+        url: /pages/about/
+      - page: Testing2
+        url: /pages/authentication/ 
