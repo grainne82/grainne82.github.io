@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://kit.fontawesome.com/75a3ff46b4.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
+    <!-- <script src="assets/js/javascripts/main.js" defer></script> -->
     {% include head-custom.html %}
   </head>
   <body>
@@ -59,6 +59,34 @@
         <div class="article">{{ content }}</div>
       </main>
     </div>
-    <footer class="site-footer">Grainne Reidy 2022</footer>
+    <footer class="site-footer">AccountsIQ 2022</footer>
   </body>
 </html>
+
+
+<script>
+  ///HAMBURGER MENU///////
+
+const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
+const navLinks = document.getElementsByClassName('nav-container')[0];
+const sideNav = document.getElementsByClassName('sidenavContainer')[0];
+const article = document.getElementsByClassName('article')[0];
+const navToggle = document.getElementsByClassName('hamburger-menu')[0];
+
+hamburgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active')
+    sideNav.classList.toggle('active')
+    article.classList.toggle('active')
+    navToggle.classList.toggle('active')
+    })
+
+
+window.addEventListener("resize", () => {
+    if(document.body.clientWidth > 769) {
+       navLinks.classList.remove('active')
+       sideNav.classList.remove('active') 
+       article.classList.remove('active')
+       navToggle.classList.remove('active')
+    }    
+})
+</script>

@@ -3,9 +3,11 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Sora:100,200,300,400,500,600,700,800');
 
+// fonts//
 * {
   font-family: 'Sora';
 }
+//reset//
 .main-container,
 .page-header,
 .main-content,
@@ -15,6 +17,7 @@
   margin: 0;
   padding: 0;
 }
+//content container//
 .main-content{
   display: flex;
   flex-direction: column;
@@ -23,6 +26,7 @@
   max-width: 100%;
   align-items: flex-start;
 }
+//links//
 a {
   color: #425eff;
 }
@@ -30,11 +34,9 @@ a:hover {
   color: #425eff80;
   text-decoration: none;
 }
-/*HEADER*/
+//company header with top links//
 .page-header {
   position: relative;
-}
-.page-header { 
   background: #fff;
   background-image: none;
   width: 100%;
@@ -69,7 +71,8 @@ a:hover {
   font-weight: 600;
 }
 .project-name a:hover .hover {
-  opacity: 0.5;
+  opacity: 0.8;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
  .nav-container {
@@ -106,6 +109,7 @@ a:hover {
 .nav-container a:hover {
   color:#425eff;
 }
+//hamburger menu//
 .hamburger-menu .bars {
   position:absolute;
   top: 1.5rem;
@@ -190,7 +194,6 @@ a:hover {
   padding-left: 1.5%;
   padding-right: 1.5%;
 }
-
 
 .item a:hover,
 .sub-item-top-item a:hover,
@@ -286,7 +289,7 @@ footer {
 }
 
 /*MEDIA QUERIES*/
-@media  only screen and (min-width: 769px){
+@media  only screen and (min-width: 42em){
   .page-header, .main-content {
     flex-direction: row; 
   }
@@ -296,6 +299,9 @@ footer {
   }
   .company {
     border:none;
+  }
+  .project-name {
+    font-size: 2.25em;
   }
   .nav-container {
     width:40rem;

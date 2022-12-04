@@ -1,3 +1,4 @@
+///HAMBURGER MENU///////
 
 const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
 const navLinks = document.getElementsByClassName('nav-container')[0];
@@ -21,6 +22,8 @@ window.addEventListener("resize", () => {
        navToggle.classList.remove('active')
     }    
 })
+
+////DROPDOWN WITH TWO LEVELS////
 
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;

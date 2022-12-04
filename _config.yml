@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Grainne Reidy
+title: AccountsIQ API
 email: your-email@example.com
-description: Welcome to my website
+description: Discover our API
 # baseurl: "" # the subpath of your site, e.g. /blog, comment out if hosting on github
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Reference
 layout: default
 permalink: pages/reference/
