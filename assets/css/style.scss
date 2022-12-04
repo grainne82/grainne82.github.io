@@ -30,20 +30,23 @@ a:hover {
 }
 
 //=======================================layout============================================================
+body {
+  min-width: 500px;
+}
 .main-content{
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 100%;
+  // min-height: 100vh;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 6rem;
 }
 .header-container {
-  position: fixed;
-  top:0;
   z-index: 50;
   width:100%;
+  min-height: 0px;
+  
 }
 .page-header {
   background: #fff;
@@ -67,20 +70,16 @@ a:hover {
 }
 .sidenav-container.active {
   display: block;
+  margin-top: 2rem;
 }
 .sidenav {
   width:100%; 
 }
-.article {
-  width: 100%;
-  padding: 2em 0em 10em 2em;
-}
  //=================================================company title==============================================
-.company {
+.company-container {
   width: 100%;
   height:4rem;
   display:flex;
-  // border-bottom: 2px solid #f1f5fc;
   align-items: center;
 }
 .company-name {
@@ -107,7 +106,7 @@ a:hover {
 .topnav-container {
   width:100%;
   border-bottom: 2px solid #f1f5fc;
-  margin-left: 2rem;
+  padding-left: 2rem;
   // display: none;
   display:flex;
   align-items: flex-end;
@@ -145,6 +144,9 @@ a:hover {
   display: block;
 }
 //==========================================hamburger menu=======================================================
+
+.hamburger-container {
+}
 .bars {
   position:absolute;
   top: 1.5rem;
@@ -280,6 +282,14 @@ a:hover .bars .bar {
 
 //================================================article=======================================================
 
+.article {
+  width: 100%;
+  padding: 2em 0em 10em 2em;
+  display: flex;  
+  z-index: 0;
+  flex-direction: column;
+  gap: 1rem;
+}
 .article h1,
 .article h2,
 .article h3 {
@@ -288,35 +298,39 @@ a:hover .bars .bar {
 .article.active {
   display: none;
 }
-.article {
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-}
 .article-contents {
   order:2;
+  min-width: 500px;
 }
 .in-this-article {
   order: 1;
-  padding-bottom: 1.5rem;
+  // padding-bottom: 1.5rem;
+}
+.in-this-article ul {
+  list-style: none;
+  padding-left: 0;
 }
 //===========================================tables========================================================
 .table-container {
-  width: 90%;
+  max-width: 600px;
   overflow-x: auto;
 }
 th {
-  font-size: .9rem;
   font-weight: 500;
 }
 td {
-  font-size: .85rem;
   font-weight: 300;
 }
-//==============================================definition-lists===============================================
-dl {
-  font-size: 1rem;
+.highlight,
+pre,
+figure  {
+  max-width: 400px;
 }
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+//==============================================definition-lists===============================================
 dt {
   font-weight: 500;
 }
@@ -328,14 +342,15 @@ dd {
 .footer-container {
   display: flex;
   flex-direction: row;
-  position:fixed;
-  width: 100%;
-  z-index: 10;
+  // width: 100%;
+  min-height: 0px;
   background: #fff;
   height: 5rem;
   align-items: center;
   justify-content: center;
-  bottom: 0;
+  margin-bottom: 0;
+  border-top:2px solid #f1f5fc;
+  
 }
 .site-footer {
   margin: 0;
@@ -344,13 +359,10 @@ dd {
 }
 
 //=================================================media queries================================================
-@media  only screen and (min-width: 42em){
+@media  only screen and (min-width: 1100px){
   .main-content {
     flex-direction: row;
-    margin-top: 4rem;
-  }
-  .main-content p {
-    font-size: 1rem;
+    min-height: 0px;
   }
   .page-header {
     flex-direction: row;
@@ -358,7 +370,7 @@ dd {
     height: 4rem;
     border-bottom: 2px solid #f1f5fc;
   }
-  .company {
+  .company-container {
     width: 40%;
     align-items: center;
     justify-content: flex-start;
@@ -378,28 +390,34 @@ dd {
   }
   .sidenav-container {
     max-width: 300px;
-    width: 300px;
     display: block;
     border-radius: 0px;
     overflow-y: auto;
-    height:100vh;
-    position: fixed;
-    left: 0;
+    top:0;
+    position: sticky;
+    height: 100vh;
+    margin: 0;
   }
   .article {
-    margin-left: 300px;
-    margin-right: 300px;;
+    margin-right: 2rem;
     width: 100%;
-    // flex-direction: row;
+    flex-direction: row;
+    min-height: 0px;
   }
-  // .article-contents {
-  //     order: 1;
-  // }
-  // .in-this-article {
-  //   order: 2;
-  //   width: 300px;
-  //   padding-left: 1rem;
-  // }
+  .article-contents {
+    order: 1;
+    flex: 1 1 70%;
+  }
+  .in-this-article {
+    order: 2;
+    max-width: 300px;
+    min-width: 200px;
+    padding-left: 1rem;
+    position: sticky;
+    top: 0;
+    flex: 1 1 30%;
+    height: 100vh;
+  }
   .hamburger-menu {
     display: none;
   }
