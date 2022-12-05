@@ -31,7 +31,7 @@ a:hover {
 
 //=======================================layout============================================================
 body {
-  min-width: 500px;
+  min-width: 400px;
 }
 .main-content{
   display: flex;
@@ -77,7 +77,6 @@ body {
 }
  //=================================================company title==============================================
 .company-container {
-  width: 100%;
   height:4rem;
   display:flex;
   align-items: center;
@@ -145,17 +144,27 @@ body {
 }
 //==========================================hamburger menu=======================================================
 
+.mobile-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 1rem;
+  width: 100%;
+  
+}
 .hamburger-container {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bars {
-  position:absolute;
-  top: 1.5rem;
-  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 30px;
   height: 30px;
+  position:relative;
 }
 .bar {
   height: 3px;
@@ -170,12 +179,13 @@ a:hover .bars .bar {
   display: none;
 }
 .hamburger-menu.active .hamburger-top {
-  transform: rotate(-45deg);
+  rotate: 45deg;
   position: absolute;
   background-color: #425eff;
+
 }
 .hamburger-menu.active .hamburger-bottom {
-  transform: rotate(45deg);
+  rotate: -45deg;
   position: absolute;
   background-color: #425eff; 
 }
@@ -292,7 +302,8 @@ a:hover .bars .bar {
 }
 .article h1,
 .article h2,
-.article h3 {
+.article h3,
+.article h4 {
   color: #162c5e;
 }
 .article.active {
@@ -301,6 +312,7 @@ a:hover .bars .bar {
 .article-contents {
   order:2;
   min-width: 500px;
+  padding-right: 1rem;
 }
 .in-this-article {
   order: 1;
@@ -321,11 +333,14 @@ th {
 td {
   font-weight: 300;
 }
-.highlight,
-pre,
-figure  {
-  max-width: 400px;
+.language-plaintext {
+  max-width: 600px;
 }
+// .highlight,
+// pre,
+// figure  {
+//   // max-width: 400px;
+// }
 figure {
   margin-left: 0;
   margin-right: 0;
@@ -359,7 +374,7 @@ dd {
 }
 
 //=================================================media queries================================================
-@media  only screen and (min-width: 1100px){
+@media  only screen and (min-width: 42em){
   .main-content {
     flex-direction: row;
     min-height: 0px;
@@ -371,7 +386,6 @@ dd {
     border-bottom: 2px solid #f1f5fc;
   }
   .company-container {
-    width: 40%;
     align-items: center;
     justify-content: flex-start;
     height:100%;
@@ -385,9 +399,6 @@ dd {
   .topnav-links {
     width:100%;
   }
-  .topnav-links li {
-    text-align: right;
-  }
   .sidenav-container {
     max-width: 300px;
     display: block;
@@ -398,7 +409,13 @@ dd {
     height: 100vh;
     margin: 0;
   }
-  .article {
+  
+  .hamburger-menu {
+    display: none;
+  }
+}
+@media  only screen and (min-width: 64em){
+.article {
     margin-right: 2rem;
     width: 100%;
     flex-direction: row;
@@ -418,8 +435,4 @@ dd {
     flex: 1 1 30%;
     height: 100vh;
   }
-  .hamburger-menu {
-    display: none;
-  }
 }
-

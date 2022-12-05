@@ -6,35 +6,39 @@ docs:
     subfolderitems:
       - page: About
         url: /pages/about/
-      - page: Authentication
-        url: /pages/authentication/
-  - page: Reference
+      - page: Integration Partners
+        url: /pages/integrating/          
+      - page: Benefits
+        url: /pages/benefits/  
+  - page: Developing
     class: fa-solid fa-house-user
     caret: fa-solid fa-caret-down      
     subfolderitems:
-      - page: Category Overview
-        url: /pages/category1/
-        subsubfolderitems:
-          - page: Method 1
-            url: /pages/method1/
-          - page: Method 2
-            url: /pages/method2/
-      - page: Testing
-        url: /pages/category1/
-        subsubfolderitems:
-          - page: Testing 1
-            url: /pages/method1/
-          - page: Testing 2
-            url: /pages/method2/ 
-      - page: Testing3
-        url: /pages/about/
-      - page: Testing4
-        url: /pages/authentication/    
-  - page: Testing2
+      - page: Specifications
+        url: /pages/specifications/
+      - page: Authentication
+        url: /pages/authentication/
+      - page: Process
+        url: /pages/process/
+      - page: Troubleshooting
+        url: /pages/troubleshooting/              
+      - page: Data types
+        url: /pages/datatypes/
+  - page: API Reference
     class: fa-solid fa-house-user
     caret: fa-solid fa-caret-down
     subfolderitems:
-      - page: Testing2
-        url: /pages/about/
-      - page: Testing2
-        url: /pages/authentication/ 
+      - page: Reference
+        url: /pages/reference/ 
+  - page: Glossary
+    class: fa-solid fa-house-user
+    caret: fa-solid fa-caret-down
+    subfolderitems:
+      - page: A-Z
+        url: /pages/a-z/
+  - page: Legal
+    class: fa-solid fa-house-user
+    caret: fa-solid fa-caret-down
+    subfolderitems:
+      - page: Terms of Use
+        url: /pages/termsofuse/
