@@ -5,7 +5,7 @@ docs:
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: About
-        url: /pages/about/
+        url: /index/
       - page: Integration Partners
         url: /pages/integrating/          
       - page: Benefits

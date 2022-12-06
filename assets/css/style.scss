@@ -275,6 +275,9 @@ a:hover .bars .bar {
 .dropdown.active .fa-caret-down {
   transform: rotate(180deg);
 }
+.subnav-link.active:hover {
+  background:#e4e7f3;
+}
 
 ///========================================scrollbar======================================================
 // *::-webkit-scrollbar {
@@ -316,11 +319,25 @@ a:hover .bars .bar {
 }
 .in-this-article {
   order: 1;
+  font-size: 0.85rem;
   // padding-bottom: 1.5rem;
+}
+.in-this-article a {
+  color: gray;
+}
+.in-this-article a:hover {
+  color: #425eff;
+}
+.in-this-article h3 {
+    margin-top: 0;
+    color: #425eff;
 }
 .in-this-article ul {
   list-style: none;
   padding-left: 0;
+}
+.in-this-article li {
+  line-height: 1.75rem;
 }
 //===========================================tables========================================================
 .table-container {

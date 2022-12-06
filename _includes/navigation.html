@@ -59,13 +59,13 @@
 <script>
    ////DROPDOWN WITH TWO LEVELS////
 
-var dropdown = document.getElementsByClassName("dropdown");
-var i;
+let dropdown = document.getElementsByClassName("dropdown");
+let i;
 
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
+    let dropdownContent = this.nextElementSibling;
     if (dropdownContent.style.display === "block") {
       dropdownContent.style.display = "none";
     } else {
@@ -74,18 +74,13 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
-// var subdropdown = document.getElementsByClassName("sub-dropdown");
-// var i;
+let sublinks = document.getElementsByClassName("subnav-link");
 
-// for (i = 0; i < subdropdown.length; i++) {
-//   subdropdown[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var subdropdownContent = this.nextElementSibling;
-//     if (subdropdownContent.style.display === "block") {
-//       subdropdownContent.style.display = "none";
-//     } else {
-//       subdropdownContent.style.display = "block";
-//     }
-//   });
-// }
+for (i = 0; i < sublinks.length; i++) {
+  sublinks[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    }    
+  )};
+
+  
 </script>

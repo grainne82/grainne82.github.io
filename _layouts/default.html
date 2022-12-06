@@ -55,12 +55,7 @@
         <div class="sidenav-container">{% include navigation.html %}</div>
         <div class="article">
           <div class="article-contents">{{ content }} </div>
-          <div class="in-this-article">
-            <h3>In this article</h3>
-                {% if page.toc != false %} 
-                {% include toc.js %}
-                {% endif %}
-          </div>
+          <div class="in-this-article">{% include toc.html %}</div>
         </div>
       </main>
     
