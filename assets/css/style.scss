@@ -221,7 +221,7 @@ a:hover .bars .bar {
 .button-text {
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 1.5rem 0.25rem 2.5rem;
+  padding: 0.25rem 2.5rem 0.25rem 2.5rem;
   align-items: center;
   width: 100%;
   font-size: 0.95rem;
@@ -264,13 +264,17 @@ a:hover .bars .bar {
 //sidenav icons//
 .sidenav i {
   color: #425eff80;
+  font-size: .8rem;  
 }
-.fa-house-user {
-  font-size: .8rem;
+.fa-map,
+.fa-code-branch,
+.fa-gear,
+.fa-magnifying-glass,
+.fa-gavel {
   padding-right: 1rem;
 }
 .fa-caret-down {
-  font-size: .8rem;
+  padding-right: 0;
 }
 .dropdown.active .fa-caret-down {
   transform: rotate(180deg);
@@ -278,20 +282,6 @@ a:hover .bars .bar {
 .subnav-link.active:hover {
   background:#e4e7f3;
 }
-
-///========================================scrollbar======================================================
-// *::-webkit-scrollbar {
-//   width: 8px;
-// }
-// *::-webkit-scrollbar-track {
-//   background: #162c5e;
-//   border-radius: 100vw;
-//   margin-block: 0.5em;
-// }
-// *::-webkit-scrollbar-thumb {
-//   background-color: #425eff;
-//   border-radius: 20px;  
-// }
 
 //================================================article=======================================================
 
@@ -301,12 +291,14 @@ a:hover .bars .bar {
   display: flex;  
   z-index: 0;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 .article h1,
 .article h2,
 .article h3,
-.article h4 {
+.article h4,
+.article h5,
+.article h6 {
   color: #162c5e;
 }
 .article.active {
@@ -320,7 +312,6 @@ a:hover .bars .bar {
 .in-this-article {
   order: 1;
   font-size: 0.85rem;
-  // padding-bottom: 1.5rem;
 }
 .in-this-article a {
   color: gray;
@@ -333,7 +324,7 @@ a:hover .bars .bar {
     color: #425eff;
 }
 .in-this-article ul {
-  list-style: none;
+  // list-style: none;
   padding-left: 0;
 }
 .in-this-article li {
@@ -353,11 +344,6 @@ td {
 .language-plaintext {
   max-width: 600px;
 }
-// .highlight,
-// pre,
-// figure  {
-//   // max-width: 400px;
-// }
 figure {
   margin-left: 0;
   margin-right: 0;

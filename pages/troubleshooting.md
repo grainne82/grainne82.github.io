@@ -2,19 +2,58 @@
 title: Troubleshooting
 layout: default
 permalink: pages/troubleshooting/
+category: Developing
 ---
 
-## Troubleshooting 
+# Troubleshooting 
 
-### Resolving Errors in Sales Receipts and Sales Orders
+## Login Issues
+### PHP
+Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from ....
+This is likely due to misconfiguring the request. The following sample shows how to configure your login request:
+```
+<?php
 
-#### Sales Receipt Errors
+$wsdlUrl = "https://hostacct.com/system/dashboard/integration/integration_1_1.asmx?wsdl";
+
+$opts = array(
+		'ssl' => array( 
+			'verify_peer'=>true, 
+			'verify_peer_name'=>true,
+			'crypto_method' => STREAM_CRYPTO_METHOD_TLS_CLIENT)
+);
+
+$params = array(
+                'soap_version'=>SOAP_1_1,
+                'exceptions'=>true,
+                'trace'=>0,
+                'cache_wsdl'=>WSDL_CACHE_NONE,
+                'stream_context' => stream_context_create($opts)
+        );
+
+$client = new SoapClient($wsdlUrl, $params);
+
+$vars = array(
+			'companyID'=>'YOUR_COMPANY_ID',
+			'partnerKey'=>'YOUR_PARTNER_KEY',
+			'userKey'=>'YOUR_USER_KEY');
+			
+$result = $client->Login($vars);
+
+echo $result->LoginResult
+
+?>
+```
+The LoginResult is your authentication token to be used in all subsequent API calls.
+
+
+## Sales Receipt Errors
 If you receive an error message, check that you have included the following mandatory variables:
 - `BankAccountCode` 
 - `CheckReference `
 - `CustomerCode` 
 
-#### Sales Order Errors
+## Sales Order Errors
 If you receive an error message, check that the following are correct:
 -	`Author User ID` should be null. 
 -	`Creation Date` should be null. 
@@ -32,7 +71,7 @@ In each line:
 -	`OrderItemIDshould` be 0.
 -	`QuoteItemID` should be null.
 
-#### Bulk Processing Speed
+## Bulk Processing Speed
 **Issue:** I need to create, populate, and post thousands of invoices. How can I speed up the process? 
 
 **Solution:** 
@@ -41,7 +80,7 @@ The bulk methods can support thousands of records a second. You can identify the
 -	Use `GetNewSalesInvoices` instead of `GetNewSalesInvoice` 
 -	Use `PostInvoicesGetBackTransactionIDs` instead of `PostInvoiceGetBackTransactionID` 
 
-#### Creating a Customer Account
+## Creating a Customer Account
 **Issue:** The customer I am trying to create is not saving.
 
 **Solution:**
@@ -51,7 +90,7 @@ There can be multiple reasons for this. Check the following:
 -	The BankCode  exists in the system (The `BankCode` is the General Ledger code representing the bank in the system whereas the `BankAccountCode` is the physical bank account number in the bank branch).
 -	The referral ID is not specified through the API. It must be left blank/null.
 
-#### Code Sample: C#
+### Code Sample: C#
 ```
       private void CreateNewCustomer()
       {
@@ -83,21 +122,22 @@ There can be multiple reasons for this. Check the following:
       }
 ```
 
+## Populating all the fields in a Customer Record
 **Issue:** I want to create a new customer but I don’t know how to populate all fields in the customer record.
 
 **Solution:** Use the `GetNewCustomerFromDefaults` method. This returns the shell of a customer pre-populated with all the default values. This is a useful method for creating a test customer.
  
-#### Creating a new order/invoice
+## Creating a new order/invoice
 
 **Issue:** I created a new order/invoice. I then retrieved it to check it was saved and updated it again, but this failed.
 
 **Solution:** Send back the modified values in the retrieved order/invoice not the original. Otherwise, the values set during saving, such as `RowVersionNumber`, will not match.
 
-#### Getting a due date for an Invoice
+## Getting a due date for an Invoice
 
 First, using the `GetSupplier` or `GetCustomer` method, interrogate the supplier or customer and find the `CreditTermID`.
 
-#### JSON Sample
+### JSON Sample
 ```
 "CreditTermID": "1": This needs to be matched to the output (an array of credit terms) from GetCreditTermList.
 

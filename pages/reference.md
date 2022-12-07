@@ -2,6 +2,7 @@
 title: Reference
 layout: default
 permalink: pages/reference/
+category: Reference
 ---
 ## Methods
 - [Banks](https://github.com/accountsIQ/API-Wiki/wiki/Banks)

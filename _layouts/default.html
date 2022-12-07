@@ -54,7 +54,10 @@
       
         <div class="sidenav-container">{% include navigation.html %}</div>
         <div class="article">
-          <div class="article-contents">{{ content }} </div>
+          <div class="article-contents">
+            <div class="article-category"><h5>{{ page.category }}</h5></div>
+                  {{ content }} 
+          </div>
           <div class="in-this-article">{% include toc.html %}</div>
         </div>
       </main>

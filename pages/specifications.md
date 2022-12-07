@@ -2,17 +2,21 @@
 title: Specifications
 layout: default
 permalink: pages/specifications/
+category: Developing
 ---
 
-## Specifications 
+# Specifications 
 
-### Languages
-The API is language-independent so you can use it with any chosen language. You can use it with languages such as Java, C#, VB.NET, and PHP. We only provide examples in C# and VB.NET in our documentation.
+## Languages
+AIQ API is language-independent. You can use it with languages such as Java, C#, VB.NET, and PHP. In our documentation, we only provide code examples in C# and VB.NET.
 
-### Protocol
-The API uses SOAP 1.1.
+## Protocol
+AIQ API uses SOAP 1.1.
 
-### WSDL File 
+## Open API 
+AIQ API meets OpenAPI specifications.
+
+## WSDL File 
 The WSDL file is the same across all regions, but the endpoint differs by region. 
 
 Enter one of the following in place of `{regioncode}` in the WSDL link:

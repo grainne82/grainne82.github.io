@@ -4,24 +4,29 @@
 
 title: About
 layout: default
-toc: true
+category: Overview
 ---
 
-# Overview
+# About our API
 
-## About our API
-APIs are digital systems that let separate systems communicate with each other, letting you tie your disparate business processes together. APIs are a two-way stream. They interact with other systems by sending and retrieving the relevant data. The flexibility of APIs gives you great scope in how you exchange data.
+## What are APIs?
+APIs are digital interfaces that allow disparate systems to communicate with each other. By integrating APIs into your business practice you can tie together otherwise divergent business processes. 
 
-The relevancy of APIs continues to grow in all spheres, including financial. With the advent of cloud accounting, API integration offers the means to maximise the benefits of cloud storage.  With the AIQ API you can access data stored on our cloud servers via the internet. You can access this information from anywhere, increasing collaboration and scalability. You can be assured that you are getting the most up-to-date data available.
+APIs offer great flexibility in how you exchange data between systems. You can decide on the type of data you want to send or retrieve, the direction of the data flow, and set it all to a schedule.
 
-With AIQ API you can access data such as bank, customer, or supplier details, create transactions, make payments, and much more. You can then use this data in a flexible manner to suit your business needs. 
+## Maximise the benefits of cloud accounting
+One of the key advantages of using a cloud-based accounting system is that we maintain your data on our servers. This makes it continuously accessible to you over the internet. Take advantage of this accessibility by integrating with our web service API.
 
-You can connect AIQ with third-party systems to:
-- Retrieve data from third-party systems into AIQ automatically.
-- Send data to third-party systems from AIQ automatically.
+Connect AIQ with third-party systems to both:
+-	Retrieve data from third-party systems into AIQ automatically.
+-	Send data to third-party systems from AIQ automatically.
 
-## Is the aiq api available with all AIQ editions?
+## API Availability
 All editions have access without restriction.
+
+## Accessing Data
+The API allows you to access most entity level data. You cannot access customer (practice) level data.
+If you are interested in data that our API has not yet exposed, please contact us at [integration@accountsiq.com](mailto:integration@accountsiq.com) and we will take your suggestions into consideration.
 
 ## Compatability 
 The AccountsIQ system evolves constantly and so does its API. To avoid incompatibilities with our integrator partner applications, we make backward compatible changes. We also offer a mailing list where developers can receive information on the latest bug fixes as well as new methods.
@@ -29,7 +34,9 @@ The AccountsIQ system evolves constantly and so does its API. To avoid incompati
 **See:** [SOAP API Update Bulletin](https://github.com/accountsIQ/API-Wiki/wiki/AccountsIQ-SOAP-API-Update-Bulletins)
 
 ## Feedback and support
-For clarification on any aspects of this API, contact [integration@accountsiq.com](mailto:integration@accountsiq.com) or [development@accountsiq.com](mailto:development@accountsiq.com).
+For clarification on any aspects of this API, contact either:
+- [integration@accountsiq.com](mailto:integration@accountsiq.com)
+- [development@accountsiq.com](mailto:development@accountsiq.com)
 
 
 

@@ -2,10 +2,11 @@
 title: A-Z
 layout: default
 permalink: pages/a-z/
+category: Glossary
 ---
-## A-Z
+# A-Z
 
-### A
+## A
 **Allocatable Transactions:**
 Transactions that are eligible for allocation.
 
@@ -45,7 +46,6 @@ To cancel each other out, you must match a transaction from Column A with its eq
 ## B
 
 **Batch Invoice:**
-
 A batch invoice is an invoice whose lines do not hold a reference to a stock item. This means the creation of a batch invoice does not involve stock movement / transactions. A batch invoice is directly posted to the transactions table while a Product Invoice must be posted to hit the transactions journal.
 
 **Business Documents:**

@@ -1,43 +1,45 @@
 docs_list_title: AccountsIQ
 docs:
   - page: Overview
-    class: fa-solid fa-house-user
+    class: fa-regular fa-map
     caret: fa-solid fa-caret-down
     subfolderitems:
-      - page: About
+      - page: About our API
         url: /index/
+      - page: Key Advantages
+        url: /pages/advantages/         
       - page: Integration Partners
         url: /pages/integrating/          
-      - page: Benefits
-        url: /pages/benefits/  
+      - page: Business Use Cases
+        url: /pages/usecases/
+      - page: Popular Methods 
+        url: /pages/datatypes/  
   - page: Developing
-    class: fa-solid fa-house-user
+    class: fa-solid fa-code-branch
     caret: fa-solid fa-caret-down      
     subfolderitems:
       - page: Specifications
         url: /pages/specifications/
+      - page: Guidelines
+        url: /pages/guidelines/        
       - page: Authentication
         url: /pages/authentication/
-      - page: Process
-        url: /pages/process/
       - page: Troubleshooting
         url: /pages/troubleshooting/              
-      - page: Data types
-        url: /pages/datatypes/
   - page: API Reference
-    class: fa-solid fa-house-user
+    class: fa-solid fa-gear
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: Reference
         url: /pages/reference/ 
   - page: Glossary
-    class: fa-solid fa-house-user
+    class: fa-solid fa-magnifying-glass
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: A-Z
         url: /pages/a-z/
   - page: Legal
-    class: fa-solid fa-house-user
+    class: fa-solid fa-gavel
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: Terms of Use
