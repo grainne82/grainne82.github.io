@@ -73,28 +73,22 @@
 
 <script>
 const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
-// const navLinks = document.getElementsByClassName('topnav-container')[0];
 const sideNav = document.getElementsByClassName('sidenav-container')[0];
 const article = document.getElementsByClassName('article')[0];
 const navToggle = document.getElementsByClassName('hamburger-menu')[0];
-// const sidePanel = document.getElementsByClassName('in-this-article')[0];
 
 hamburgerMenu.addEventListener('click', () => {
-    // navLinks.classList.toggle('active')
     sideNav.classList.toggle('active')
     article.classList.toggle('active')
     navToggle.classList.toggle('active')
-    // sidePanel.classList.toggle('active')
     })
 
 
 window.addEventListener("resize", () => {
     if(document.body.clientWidth > 769) {
-      //  navLinks.classList.remove('active')
        sideNav.classList.remove('active') 
        article.classList.remove('active')
        navToggle.classList.remove('active')
-      //  sidePanel.classList.remove('active')
     }    
 })
 </script>

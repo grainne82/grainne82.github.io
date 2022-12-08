@@ -25,7 +25,6 @@ description: Discover our API
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-permalink: /:category/:title/
 
 # Build settings
 theme: jekyll-theme-cayman

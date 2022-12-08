@@ -102,12 +102,11 @@ body {
   opacity: 0.8;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-//=============================================topnav links======================================================
+//=============================================topnav======================================================
 .topnav-container {
   width:100%;
   border-bottom: 2px solid #f1f5fc;
   padding-left: 1rem;
-  // display: none;
   display:flex;
   align-items: flex-end;
  }
@@ -192,7 +191,7 @@ a:hover .bars .bar {
 }
 
 
-//====================================================sidenav links styling=======================================
+//====================================================sidenav-links-styling=======================================
 
 .sidenav ul, 
 .sidenav li {
@@ -262,7 +261,7 @@ a:hover .bars .bar {
   cursor: pointer;
   color: #425eff;
 }
-//sidenav icons//
+//===========================================sidenav icons//=================================================
 .sidenav i {
   color: #425eff80;
   font-size: .8rem;  
@@ -310,6 +309,7 @@ a:hover .bars .bar {
   min-width: 500px;
   padding-right: 1rem;
 }
+//=============================================in-this-article=================================================
 .in-this-article {
   order: 1;
   font-size: 0.85rem;
@@ -331,7 +331,7 @@ a:hover .bars .bar {
 .in-this-article li {
   line-height: 1.75rem;
 }
-//===========================================tables========================================================
+//===========================================tables/code-block/figures========================================================
 .table-container {
   max-width: 600px;
   overflow-x: auto;
@@ -361,7 +361,6 @@ dd {
 .footer-container {
   display: flex;
   flex-direction: row;
-  // width: 100%;
   min-height: 0px;
   background: #fff;
   height: 5rem;
@@ -398,7 +397,6 @@ dd {
     height: 100%;
     align-items: center;
     padding-right: 2rem;
-    // width: 50%;
     border: none;
   }
   .topnav-links {

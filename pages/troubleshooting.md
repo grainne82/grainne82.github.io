@@ -8,9 +8,16 @@ category: Developing
 # Troubleshooting 
 
 ## Login Issues
-### PHP
-Uncaught SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from ....
-This is likely due to misconfiguring the request. The following sample shows how to configure your login request:
+
+Uncaught SoapFault exception: 
+
+`[WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from ....`
+
+This is likely due to misconfiguring the request. 
+
+The following sample shows how to configure your login request:
+
+### Code Sample: PHP
 ```
 <?php
 
