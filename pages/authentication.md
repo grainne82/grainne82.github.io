@@ -8,11 +8,14 @@ category: Developing
 # Authentication
 
 ## What you need
-To authenticate a user, use the Login function. This function requires the following:
-- Partner key. This key is valid across multiple entities.
-- User key. The user can get this via the company information. It is only valid to impersonate one user, in one entity. Multiple keys are required to interact with multiple entities.
-- Existing Entity identifier.
-- Existing User identifier.
+To authenticate a user, use the Login function. 
+
+The Login function requires the following:
+
+- Partner key: This is provided by AccountsIQ. This key is valid across multiple entities. 
+- User key: Generate this from within AccountsIQ by going to **Setup** > **Company Details & Settings**. In the **Integration** tab type the user’s password and click **Request User Key**. It is only valid to impersonate one user in one entity. Multiple keys are required to interact with multiple entities. 
+- Existing Entity identifier: This is provided by AccountsIQ.
+- Existing User identifier: This is provided by AccountsIQ.
 - Valid end point URL.
   
 ## Session tokens
@@ -51,5 +54,8 @@ Confirm the following:
 - You are contacting the correct end point URL for your client’s region.
 - Your authentication keys are correct. If you copied your keys from an email, you have not accidently copied line endings or blank spaces.
 
-
+### See More:
+- [Specifications](/pages/specifications/)
+- [Guidelines](/pages/guidelines/)
+- [Troubleshooting](/pages/troubleshooting/)
 

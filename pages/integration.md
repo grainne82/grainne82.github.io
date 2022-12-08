@@ -1,11 +1,10 @@
 ---
 title: Integrating
-permalink: pages/integrating/
+permalink: pages/integration/
 layout: default
 category: Overview
 ---
-
-# Integration 
+# Integrate with AIQ
 ## Integration Partners
 Our comprehensive development partnerships means we can quickly deploy integrated solutions for organisations, providing them with specific management information and real time reporting. 
 
@@ -43,3 +42,8 @@ If you are an integration partner, the workflow is as follows:
 ## Custom Integration
 With our open API, we can create custom integrations for your existing systems. If you are interested in custom integrations, please contact our team at [sales@accountsIQ.com](mailto:sales@accountsIQ.com) or [support@accountsIQ.com](mailto:support@accountsIQ.com).
 
+### See More:
+- [About our API](/index/)
+- [Key Advantages of APIs](/pages/advantages/)
+- [Business Use Cases](/pages/usecases/)
+- [Popular Methods](/pages/datatypes/)

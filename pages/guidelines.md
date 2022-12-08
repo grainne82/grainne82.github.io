@@ -38,3 +38,7 @@ If you have finished developing the integration link and want to go live:
 If you are not in a staging environment:
 - Allow for the user to select the correct region and change the endpoint URL accordingly.
 
+### See More:
+- [Specifications](/pages/specifications/)
+- [Authentication](/pages/authentication/)
+- [Troubleshooting](/pages/troubleshooting/)

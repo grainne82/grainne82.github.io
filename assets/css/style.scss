@@ -73,7 +73,8 @@ body {
   margin-top: 2rem;
 }
 .sidenav {
-  width:100%; 
+  width:100%;
+  margin-top: 1rem; 
 }
  //=================================================company title==============================================
 .company-container {
@@ -105,7 +106,7 @@ body {
 .topnav-container {
   width:100%;
   border-bottom: 2px solid #f1f5fc;
-  padding-left: 2rem;
+  padding-left: 1rem;
   // display: none;
   display:flex;
   align-items: flex-end;
@@ -270,7 +271,7 @@ a:hover .bars .bar {
 .fa-code-branch,
 .fa-gear,
 .fa-magnifying-glass,
-.fa-gavel {
+.fa-copyright {
   padding-right: 1rem;
 }
 .fa-caret-down {
@@ -396,11 +397,15 @@ dd {
   .topnav-container {
     height: 100%;
     align-items: center;
-    width: 50%;
+    padding-right: 2rem;
+    // width: 50%;
     border: none;
   }
   .topnav-links {
     width:100%;
+  }
+  .topnav-links li {
+    text-align: right;
   }
   .sidenav-container {
     max-width: 300px;

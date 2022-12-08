@@ -157,7 +157,11 @@ First, using the `GetSupplier` or `GetCustomer` method, interrogate the supplier
             }
 ```
 
-In this where the Code matches the supplier/customers "CreditTermID" you have two key pieces of information:
+In this where the Code matches the supplier/customers `CreditTermID` you have two key pieces of information:
 -	the number of days (`CreditDays`)
 -	whether `EndOfMonth` is set to true or false. If false then it is invoice date plus the no of days, but if `EndOfMonth` is true that is then set from the last day of the month in which the invoice date falls.
 
+### See More:
+- [Specifications](/pages/specifications/)
+- [Guidelines](/pages/guidelines/)
+- [Authentication](/pages/authentication/)

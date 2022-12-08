@@ -8,8 +8,8 @@ docs:
         url: /index/
       - page: Key Advantages
         url: /pages/advantages/         
-      - page: Integration Partners
-        url: /pages/integrating/          
+      - page: Integrate with AIQ
+        url: /pages/integration/          
       - page: Business Use Cases
         url: /pages/usecases/
       - page: Popular Methods 
@@ -38,8 +38,8 @@ docs:
     subfolderitems:
       - page: A-Z
         url: /pages/a-z/
-  - page: Legal
-    class: fa-solid fa-gavel
+  - page: Terms of Use
+    class: fa-solid fa-copyright
     caret: fa-solid fa-caret-down
     subfolderitems:
       - page: Terms of Use
