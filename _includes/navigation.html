@@ -56,13 +56,14 @@
    </body>
 </html>
 
+
+
 <script>
-   ////DROPDOWN WITH TWO LEVELS////
+   ////DROPDOWN////
 
 let dropdown = document.getElementsByClassName("dropdown");
-let i;
 
-for (i = 0; i < dropdown.length; i++) {
+for (let i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
     this.classList.toggle("active");
     let dropdownContent = this.nextElementSibling;
@@ -74,13 +75,15 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
+
 let sublinks = document.getElementsByClassName("subnav-link");
 
-for (i = 0; i < sublinks.length; i++) {
-  sublinks[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    }    
-  )};
+for (let i = 0; i < sublinks.length; i++){
+      sublinks[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+   });
+}
+
 
   
 </script>

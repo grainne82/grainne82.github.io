@@ -65,8 +65,9 @@ body {
   display:none;
   margin: auto;
   border-radius: 10px;
-  height: 400px;
+  height: 100vh;
   overflow-y: auto;
+  margin-bottom: 2rem;
 }
 .sidenav-container.active {
   display: block;
@@ -291,7 +292,7 @@ a:hover .bars .bar {
   display: flex;  
   z-index: 0;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 .article h1,
 .article h2,
@@ -325,7 +326,6 @@ a:hover .bars .bar {
     color: #425eff;
 }
 .in-this-article ul {
-  // list-style: none;
   padding-left: 0;
 }
 .in-this-article li {
@@ -366,7 +366,6 @@ dd {
   height: 5rem;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
   border-top:2px solid #f1f5fc;
   
 }
@@ -393,11 +392,15 @@ dd {
     justify-content: flex-start;
     height:100%;
    }
+  .mobile-nav {
+    width: 30%;
+  }
   .topnav-container {
     height: 100%;
     align-items: center;
     padding-right: 2rem;
     border: none;
+    width: 50%;
   }
   .topnav-links {
     width:100%;
@@ -415,7 +418,6 @@ dd {
     height: 100vh;
     margin: 0;
   }
-  
   .hamburger-menu {
     display: none;
   }
@@ -426,10 +428,12 @@ dd {
     width: 100%;
     flex-direction: row;
     min-height: 0px;
+    gap: 5rem;
   }
   .article-contents {
     order: 1;
     flex: 1 1 70%;
+    max-width: 700px;
   }
   .in-this-article {
     order: 2;
